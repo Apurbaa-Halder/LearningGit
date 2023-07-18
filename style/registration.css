@@ -1,0 +1,58 @@
+*{
+    margin: 10px;
+    box-sizing: border-box;
+}
+.container{
+    background-color: lavenderblush;
+    border: 2px solid darkred ;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.main_heading{
+    font-family: 'Ysabeau Office', Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: darkmagenta;
+    text-shadow: 3px 3px 3px rgba(176, 1, 176, 0.692);
+}
+input[type="text"],input[type="number"],select,textarea,fieldset,input[type="email"],input[type="date"],input[type="password"]{
+    padding: 5px;
+    width: 100%;
+    border: 1px solid slateblue;
+    border-radius: 3px;
+    box-shadow: 3px 2px 1px slategray;
+    text-align: justify;
+}
+h2{
+    font-family: 'PT Serif', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: deeppink;
+}
+#form{
+    font-family: 'Dancing Script', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: blueviolet;
+}
+.content{
+    font-family: 'Crimson Text', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+}
+input[type="radio"]:hover,input[type="submit"]:hover{
+    cursor: pointer;
+}
+input[type="submit"]{
+    display: inline-block;
+    padding: 15px 32px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgba(100, 148, 237, 0.867);
+    color: white;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+}
+input[type="submit"]:hover{
+    color: yellow;
+}
+input[type="radio"]:hover{
+    color: white;
+}

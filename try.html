@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <title>Trial</title>
+    <style>
+        @media not all and (orientation:landscape) {
+            div.box{
+                color: darkorange;
+            }            
+        }
+        .form{
+            box-sizing: border-box;
+            margin: 5px 10px;
+            background-color: rgba(0, 255, 195, 0.221);
+            border: 5px solid gold;
+            border-radius: 6px;
+            padding-left: 30px;
+            padding-bottom: 10px;
+        }
+        input[type="text"],input[type="email"],input[type="password"],input[type="tel"]{
+            border: 1px solid darkcyan;
+            border-radius: 3px;
+            padding: 5px;
+            width: 300px;
+        }
+        input[type="submit"],input[type="button"]{
+            padding: 10px;
+            background-color: burlywood;
+            border: 1px solid black;
+            border-radius: 2px;
+            width: 200px;
+            font-weight: 600;
+            color: darkred;
+        }
+        input[type="submit"]:hover{
+           color: #ffff;
+           cursor: pointer;
+        }
+        input[type="button"]:hover{
+            color: darkmagenta;
+            cursor: grab;
+        }
+        h1{
+            color: crimson ;
+        }
+        h1{
+            color: darkgoldenrod;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+            background-color: gold;
+            padding: 20px;
+        }
+        footer {
+            background-color: grey;
+            overflow: hidden;
+        }
+        footer a{
+            text-align: center;
+            padding: 30px;
+            float: left;
+        }
+        nav a:hover{
+            color: red;
+        }
+         th{
+            color: orange;
+            font-stretch : condensed;
+            font-weight:bold;
+        }
+        ul>li{
+            list-style-type: square;
+            background-color: cadetblue;
+        }
+        ol>li{
+            background-color: rgb(223, 247, 36);
+            list-style-position: inside;
+        }
+        td b{
+            color: cornflowerblue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+        h1+nav{
+            color: cyan;
+            font-size: 200%;
+            position: sticky;
+        }
+        h2{
+            color: rgba(11, 144, 215, 0.877);
+        }
+        h5{
+            color: #e50751bc;
+        }
+        #form{
+            font-family: 'Tilt Prism', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 300%;
+            font-style: oblique;
+            text-decoration: wavy;
+            text-transform: uppercase;
+            text-shadow:2px 4px 1px #38d618de;
+        }
+        div.virat{
+            padding: 3%;
+            border: 5px dashed darkblue;
+            margin: 40px;
+            background: radial-gradient(rebeccapurple,lavender,aqua);
+        }
+        div.overflow{
+            border: 5px solid violet;
+            width: 600px;
+            height: 100px;
+            overflow: auto;
+        }
+        #firstline{
+            font:italic 300 x-large 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .background{
+            background-image: url("https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-255379.jpg&fm=jpg");
+            background-size: 500px;
+            background-repeat: no-repeat;
+            background-position: right 100px;
+            height: 500px;
+            width: 1500px;
+        }
+        #AS{
+            color: rgba(190, 8, 60, 0.953);
+            font-size: 30px;
+            font-weight: lighter;  
+            text-transform: uppercase;  
+            text-decoration: wavy;
+            text-shadow: 7px 8px 2px rgba(250, 87, 155, 0.874);
+        }
+        #kk{
+            font-size: xx-large;
+            font-weight: 900;    
+        }
+        #sg{
+            font-stretch: narrower;
+        }
+        .model{
+            background-color: azure;
+            height: 400px;
+            width: 300px;
+            padding: 20px;
+            border: 6px solid gold;
+            margin: 25px;
+        }
+        div.box{
+            background-color: bisque;
+            background: linear-gradient(to bottom,red,purple);
+        }
+        table,tr,th,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+            text-align: center;
+        }
+        thead th{
+            color: darkred;
+            font-size: x-large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-decoration: underline;
+            text-transform: uppercase;
+            background-color: rgba(236, 169, 147, 0.377);
+        }
+        #tom{
+            border: 3px solid black;
+            height: 400px;
+            width: 400px;
+        }
+        img#tom{
+            height:300px;
+            object-fit:contain ;
+        }
+        #terms:hover{
+            color: tomato;
+        }
+        .clip{
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 19% 100%, 0% 80%, 0% 20%);
+        }
+        label{
+            display: inline-block;
+            width: 150px;
+            text-align: left;
+        }
+        div#layer1{
+            z-index: -1;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 120px;
+            width: 150px;
+            padding: 20px;
+            border: 4px solid salmon;
+            background-color: aqua;
+        }
+        div#layer2{
+            z-index: -2;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            height: 120px;
+            width: 150px;
+            padding: 20px;
+            border: 4px solid slateblue;
+            background-color: cornsilk;
+        }
+        div#layer3{
+            z-index: -3;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            height: 120px;
+            width: 150px;
+            padding: 20px;
+            border: 4px solid springgreen;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--testing heading elements-->
+    <h1>Top Players</h1>
+   <nav>
+    <a href="#">Home</a>
+    <a href="#">Project</a>
+    <a href="#">Contact</a>
+    <a href="#">About us</a>
+    <a href="#">Login/Signup</a>
+   </nav>
+    <h2> <font face="Arial Black"> Top Players</font></h2>
+    <h3 style="font-family: Cambria; color: brown;">Top Players</h3>
+    <h4>Top Players</h4>
+    <h5>Top Players</h5>
+    <h6>Top Players</h6>
+
+    <!--testing entities-->
+    &lt;h1&gt;<br> &lt;&Backslash;h1&gt; &not; &Epsilon;<br>&omega;
+    <hr>
+    100<sup>10</sup><br>log 5<sub>2</sub>
+    <hr>
+    <h2>Virat Kohli</h2>
+    <div class="virat">
+    <p><b>Virat Kohli</b>,the former captain of the team, is the most crucial player for <span style="color: red;"><i> Royal Challengers Bangalore</i></span>.<small>He is one of the best cricketers in the world with a strike rate of over 138</small>.He was the top scorer in 2016 with 4 centuries and scoring the highest run of <strong>963</strong> in the overall season.<em>He was the <span style="color: orange;"> orange</span> cap holder of that year.</em></p>
+    </div>
+    <div class="box">
+        <div class="model">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis accusamus voluptatibus aperiam distinctio itaque dolor totam? Sequi quos quaerat in, molestias quas cupiditate nesciunt ratione doloremque sunt officiis iure, odio quidem maiores! Cum temporibus facere tempora. Veniam incidunt culpa voluptatem possimus sunt ullam, debitis atque numquam facere dolorum earum hic eum, error aperiam doloribus deleniti necessitatibus id ipsa qui. Eius assumenda omnis explicabo ipsum repellat aut, exercitationem nemo non nobis a similique excepturi, adipisci quae deserunt praesentium minima sit. Illum, adipisci et sed similique quo ex maiores accusamus hic cum. Quod ad vitae quaerat repellat, repellendus nihil non maiores maxime.</div>
+    </div>
+    <div class="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae officiis nostrum saepe quidem qui accusantium, ut eligendi minima voluptatem odio suscipit. Laboriosam enim culpa nobis nihil iusto reprehenderit error magni hic temporibus itaque. Voluptate itaque quos explicabo debitis eligendi eos deleniti libero voluptates tenetur, dolores laudantium! Molestias architecto nesciunt necessitatibus ipsum quisquam quo enim sequi assumenda. Incidunt ducimus quibusdam maxime ad sed, quam fuga inventore voluptate ut! Exercitationem voluptatibus facere aut amet odio officiis sed explicabo, ea perferendis aliquam aliquid. Deleniti nemo vero tempora sint nostrum, maiores excepturi! Rerum assumenda quasi natus, sequi accusamus commodi? Fugiat aperiam eum iste eius.
+    </div>
+    <hr>
+    <hr>
+    <!--testing list-->
+    <section>
+        <h3>List</h3>
+    <h2><u>My top artists:</u></h2>
+    <ul>
+        <li id="AS">Arjit Singh </li>
+        <h3 class="table">His best songs-</h3>
+        <ol>
+            <li>Apna Bana Le</li>
+            <li>Kesariya</li>
+            <li>Tum hi ho</li>
+            <li>Shayad</li>
+            <li>Khairiyat</li>
+        </ol>
+        <li id="kk">KK </li>
+        <li id="sg">Shreya Ghoshal </li>
+        <li>Zayn Mallik </li>
+        <li>Ed Sheeran </li>
+    </ul>
+     </section>
+    <!--testing image,hyper link,video,iframe-->
+    <a href="index.html" target="_blank">Index</a>
+    <iframe src="https://www.apnikaksha.com" frameborder="100"></iframe>
+    <img src="tom/tom holland.jpeg " alt="This is an image" id="tom">
+    <img class="clip" src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcT_UvupV4cRAscaA7ZuT5D3wEfQz0z6b090CgnxFH82cD9UVsXifb-qTrdagJlXISNWhNmKhP8kJcNLk6s" alt="Image" width="200">
+    <video src="billu.mp4" width="200" controls loop poster="https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2021/12/shutterstock_1917408059-768x512.jpg"></video>
+    <a href="http://www.yahoo.com" target="_blank" rel="noopener noreferrer"><h1>Yahoo</h1></a>
+    <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><img src="google2.0.0.1441125613.jpg" alt="Image" width="200"></a>
+    <!--testing table-->
+    <div class="background">
+    <table>
+        <thead>
+            <tr>
+                <th class="table"><i>Month</i></th>
+                <th class="table"><i>Savings</i></th>
+                <th class="table"><i>Savings for holiday</i></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="background-color: rgb(252, 250, 185);"><b>January</b></td>
+                <td style="background-color: lightpink;">$100</td>
+                <td rowspan="4" style="background-color: lightpink;">$500</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(252, 250, 185);"><b>February</b></td>
+                <td style="background-color: lightpink;">$200</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(252, 250, 185);"><b>March</b></td>
+                <td style="background-color: lightpink;">$150</td>
+            </tr>
+            <tr>
+                <td style="background-color: rgb(252, 250, 185);"><b>April</b></td>
+                <td style="background-color: lightpink;">$250</td>
+            </tr>
+            <th colspan="2" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;background-color: lightsteelblue;">Total</th>
+            <td style="background-color: lightsteelblue;">$1200</td>
+        </tbody>
+     </table>
+     </div>
+    <hr>
+    <!--testing form-->
+    <div class="form">
+   <h1 align="center" style="color: rgb(8, 190, 8);" id="form"> Sign up </h1>
+   <h3 style="color: rgba(0, 0, 255, 0.877);" id="firstline">Please fill up the form to create an account.</h3>
+   <form action="">
+   <p>
+    First Name: <input type="text" name="fname" id="fname" required> &emsp;
+    Last Name: <input type="text" name="lname" id="lname" required> 
+   </p>
+   <p>
+    Email id: <input type="email" name="email" id="email" placeholder="Enter Email" required>
+   </p>
+  <p>
+    Password: <input type="password" name="pwd" id="pwd" placeholder="Enter password" pattern=".{8,}" title="Password must contain atleast 8 characters" required>
+</p>
+<p>
+    Mobile Number: <input type="tel" name="mob_no" id="mob_no" placeholder="Ex-1234567890" pattern="[0-9]{10}" title="Enter 10 digit mobile number" required>
+</p>
+<p>
+    <input type="checkbox" name="checkbox" id="checkbox"><b>Remember Me</b>
+</p>
+<p>
+    By creating an acoount you agree to our <a href="#" style="text-decoration: none;" id="terms">Terms and Privacy.</a>
+</p>
+<p>
+    <input type="button" value="Cancel"> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="submit" value="SUBMIT">
+</p>
+</form>
+</div>
+<footer>
+    <a href="#">FAQ</a>
+    <a href="#">Contact us</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Private Policy</a>
+    <a href="#">&copy;Copyright</a>
+</footer>
+<hr>
+<form action="">
+    <p class="try">
+       <label for=""> Name: </label><input type="text" name="name-" id="name-">
+    </p>
+    <p class="try">
+       <label for=""> Father's name: </label><input type="text" name="fname-" id="fname-">
+    </p>
+    <p class="try">
+      <label for="">  Mother's name:</label> <input type="text" name="mname-" id="mname-">
+    </p>
+</form>
+<div id="layer1">
+   <h1> Paramount</h1>
+</div>
+<div id="layer2">
+    <h1> Paramount</h1>
+</div>
+<div id="layer3">
+    <h1> Paramount</h1>
+</div>
+</body>
+</html>

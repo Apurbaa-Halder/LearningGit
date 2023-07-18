@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Dancing+Script:wght@500&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="style/registration.css">
+
+</head>
+<body>
+   
+<form action="login.html">
+    <div class="container">
+        <h1 class="main_heading">Registration Form</h1>
+        <hr>
+        <h2>Student Information</h2>
+        <p id="form">Please Fill the details carefully.</p>
+        <hr>
+        <div class="content">
+        <p>Name: * <input type="text" name="name" required placeholder="Enter Your name here"></p>
+        <p>Department: * 
+            <select name="Dept" id="Department" required>
+                <option value="">---Select From Mentioned---</option>
+                <option value="CSE">Computer Science</option>
+                <option value="IT">Information Technology</option>
+                <option value="ECE">Electronics & Communication</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="AEIE">Applied Instrumentation</option>
+
+            </select>
+        </p>
+        <p>Roll NO: * <input type="text" name="Roll" id="RollNo" required placeholder="ex: IT1916"></p>
+        
+        <p> 
+        <fieldset>
+           <legend>Gender</legend>
+            Male <input type="radio" name="gender" id="male" required>
+            Female <input type="radio" name="gender" id="female" required>
+            Other <input type="radio" name="gender" id="other" required>
+       
+        </fieldset>
+        </p>    
+        
+        <p>
+        Date Of Birth: * <input type="date" name="DOB" id="DOB" required>
+        </p>
+        <p>Address: <textarea name="address" id="address" cols="200" rows="8" placeholder="Please Enter Permanent Address"></textarea></p>
+        <p>Pincode: * <input type="number" name="Pincode" id="Pincode" required placeholder="000 000"></p>
+        <p>Email: * <input type="email" name="email" id="email" required placeholder="example@cemk.ac.in"></p>
+        <p>Create Password: <input type="password" name="password" id="password"></p>
+        <p>Confirm Password: <input type="password" name="password" id="password"></p>
+        <p align="center"><input type="submit" formaction="home.html" value="Confirm & Submit"> </p>
+        <p style="text-transform: uppercase;"><b>* marked fields are required!</b> </p>
+    </div>
+
+    </div>       
+</form>
+
+
+
+</body>
+</html>

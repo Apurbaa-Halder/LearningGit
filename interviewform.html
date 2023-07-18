@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Lobster&family=Merriweather:ital,wght@1,700&family=Pathway+Extreme:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Employment Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+    <h1 align="center">Job Application</h1>
+    <hr>
+    <hr>
+    <h3 style="color: royalblue;"> <font face="Lobster"> Please fill the form below accurately indicating your potentials and suitability to job applying for.</font></h3>
+    <hr> 
+    <form action="">
+        <h2 id="per"><u>Personal Information</u></h2> 
+        <div class="mainbody">
+        <p>
+           <label for=""> Name: </label><input type="text" name="fname" id="fname" placeholder="First Name" required> &emsp;<input type="text" name="mname" id="mname" placeholder="Middle Name(if any)"> &emsp;<input type="text" name="lname" id="lname" placeholder="Last Name" required>
+        </p>
+        <p>
+            <label for="">Father's Name:</label> <input type="text" name="father_fname" id="father_fname" placeholder="First Name" required> &emsp;<input type="text" name="father_mname" id="father_mname" placeholder="Middle Name(if any)"> &emsp;<input type="text" name="father_lname" id="father_lname" placeholder="Last Name" required>
+        </p>
+        <p>
+            <label for="">Mother's Name:</label> <input type="text" name="mother_fname" id="mother_fname" placeholder="First Name" required> &emsp;<input type="text" name="mother_mname" id="mother_mname" placeholder="Middle Name(if any)"> &emsp;<input type="text" name="mother_lname" id="mother_lname" placeholder="Last Name" required>
+        </p>
+           <p> <legend>Gender:</legend>
+            <input type="radio" name="gender" id="gender" required>Male <br><input type="radio" name="gender" id="gender" required>Female <br><input type="radio" name="gender" id="gender" required>Other 
+        </p>
+            <p>
+                Age: &emsp;&ensp; <input type="number" name="age" id="age" required> &emsp; Date Of Birth: <input type="date" name="DOB" id="DOB" required> &emsp;
+              Blood Group:<select name="blood_group" id="blood_group" required>
+                <option value="">--Select your blood_group--</option>
+                <option value="A_POSITIVE">A<sup>+</sup></option>
+                <option value="A_NEGATIVE">A<sup>-</sup></option>
+                <option value="B_POSITIVE">B<sup>+</sup></option>
+                <option value="B_NEGATIVE">B<sup>-</sup></option>
+                <option value="AB_POSITIVE">AB<sup>+</sup></option>
+                <option value="AB_NEGATIVE">AB<sup>-</sup></option>
+                <option value="O_POSITIVE">O<sup>+</sup></option>
+                <option value="O_NEGATIVE">O<sup>-</sup></option>
+            </select>
+        </p>
+        <p>Religion: <select name="religion" id="religion" required>
+            <option value=""></option>
+            <option value="Hindu">Hinduism</option>
+            <option value="Muslim">Islam</option>
+            <option value="Christian">Christianity</option>
+            <option value="Sikh">Sikhism</option>
+            <option value="others">Other</option>
+        </select> &emsp;&emsp;
+           Nationality: <input type="radio" name="nationality" id="nationality"required>Indian &ensp;<input type="radio" name="nationality" id="nationality"required>Other &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+        <label for="" style="width: 90px;">State:</label> <select name="state" id="state">
+            <option value="">SELECT YOUR STATE</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Tamil_Nadu">Tamil Nadu</option>
+            <option value="West_Bengal">West Bengal</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+        </select>
+    </p>
+    <p><div class="add">Address:</div> <textarea name="Address" id="Address" cols="80" rows="5" required></textarea>
+    </p>
+    <p> City: <input type="text" name="city" id="city" required> &emsp; 
+        Pincode: <input type="tel" name="pincode" id="pincode" pattern="[0-9]{6}" title="Enter 6 digit pincode" required>
+    </p>
+    <hr>
+    <h2 id="contact"><u>Contact Information</u></h2>
+   <p> Email: <input type="email" name="email" id="email" placeholder="Ex-myname@example.com" required> &emsp;
+       Mobile No: <input type="tel" name="mob_no" id="mob_no" pattern="[0-9]{10}" title="Enter 10 digit mobile number" required></p>
+       <hr>
+       <h2 id="edu"><u>Education:</u></h2>
+       <table class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <td>Name of University</td>
+                <td>Board or Degree</td>
+                <td>Year of Passing</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>High School</td>
+                <td class="user"><input type="text" name="University_name1" id="University_name1" required></td>
+                <td class="user"><input type="text" name="Board1" id="Board1" required></td>
+                <td class="user"><input type="text" name="Year1" id="Year1" required></td>
+            </tr>
+            <tr>
+                <td>College or University</td>
+                <td class="user"><input type="text" name="University_name2" id="University_name2" required></td>
+                <td class="user"><input type="text" name="Board2" id="Board2" required></td>
+                <td class="user"><input type="text" name="Year2" id="Year2" required></td>
+            </tr>
+            <tr>
+                <td>Diploma (if any)</td>
+                <td class="user"><input type="text" name="University_name3" id="University_name3"></td>
+                <td class="user"><input type="text" name="Board3" id="Board3"></td>
+                <td class="user"><input type="text" name="Year3" id="Year3"></td>
+            </tr>
+        </tbody>
+       </table>
+       <hr>
+      <p> Position Applied for: <select name="pos" id="pos" required>
+        <option value="">Select position</option>
+        <option value="Marketing_Specialist">Marketing Specialist</option>
+        <option value="Sales_Manager">Sales Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="Product_Lead">Product Lead</option>
+        <option value="CEO">Chief Executive Officer</option>
+        <option value="Software_Engineer">Software Engineer</option>
+       </select> 
+      </p>
+      <p>How did you come to know about us? <br>
+        <input type="checkbox" name="linkedin" id="linkedin">Linkedin
+        <input type="checkbox" name="facebook" id="facebook">Facebook
+        <input type="checkbox" name="Twitter" id="Twitter">Twitter
+        <input type="checkbox" name="event" id="event">Event
+        <input type="checkbox" name="com_web" id="com_web">Company Website
+        <input type="checkbox" name="fam_fre" id="fam_fre">Family/friends
+        <input type="checkbox" name="news" id="news">Newspaper Ad
+        <input type="checkbox" name="other" id="other">Other
+      </p>
+      <p><div class="hobby">Your Hobby:</div><textarea name="hobby" id="hobby" cols="40" rows="2" required></textarea>
+    </p>
+      <p>Upload your Resume: <input type="file" name="resume" id="resume" required></p> 
+       <p> Date of Application: <input type="date" name="date_app" id="date_app" required></p>
+       <p align="center"><input type="submit" value="Submit Application"></p>
+    </div>
+    </form>
+</div>
+</body>
+</html>

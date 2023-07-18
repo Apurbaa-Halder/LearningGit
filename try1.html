@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <title>Practice CSS</title>
+    <style>
+        div.lorem{
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAIj6SlZRfjef2mFFJJZiMqfYfxfHk0j8YKrXPqpY&s") ;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100px;
+        }
+        #email{
+            float: right;
+            padding-left: 20px;
+            margin: 10px;
+        }
+        .name{
+            box-sizing: border-box;
+        }
+        #name1{
+            float: left;
+            padding: 20px;
+            background-color: burlywood;
+            width: 25vb;
+        }
+        #name2{
+            float: left;
+            padding: 20px;
+            background-color: cornflowerblue;
+            width: 25vb;
+        }
+        #name3{
+            float: left;
+            padding: 20px;
+            background-color: darkgray;
+            width: 25vb;
+        }
+        #name4{
+            float: left;
+            padding: 20px;
+            background-color: fuchsia;
+            width: 25vb;
+        }
+        @media all and (max-width:1000px) and (min-width:600px) {
+            #name1{
+                width:43%;
+            }
+            #name2{
+                display: inline-block;
+                float: none;
+                width:43%;
+            }  
+            #name3{
+                clear: both;
+                width: 43%;
+            } 
+            #name4{
+                width:43%;
+            }
+        }
+        @media all and (max-width:599px) and (min-width:300px) {
+            #name1{
+                float: none;
+                text-align: center;
+                width: 100%;
+            }  
+            #name2{
+                float: none;
+                text-align: center;
+                width: 100%; 
+            } 
+            #name3{
+                float: none;
+                text-align: center;
+                width: 100%; 
+            } 
+            #name4{
+                float: none;
+                text-align: center;
+                width: 100%; 
+            } 
+        }
+        p#lor{
+            clear: left;
+        }
+        span{
+            float: left;
+            width: 1em;
+            font-family:'Tilt Prism', Courier, monospace ;
+            font-size: 300%;
+            line-height: 80%;
+        }
+        ul{
+          background-color: rgb(48, 48, 48);
+          overflow: hidden;
+          position: sticky;
+            top: 1px;
+        }
+        li{
+            list-style-type: none;
+            float: left; 
+            
+        }
+        ul li a{
+            display: inline-block;
+            color: lightblue;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+        }
+        ul li a:hover{
+            color: gold;
+        }
+        #clear{
+            clear: both;
+        }
+        .box-set{         
+            background-color: coral;
+        }
+        .box-set,.box{
+            border-radius: 6px;
+        }
+        .box{
+            border: 1px solid black;
+            background-color: limegreen;
+            position: sticky;
+            text-align: center;
+            padding: 5px;
+            height: 80px;
+            width: 80px;
+            margin: 10px;    
+        }
+        .box1{
+            bottom: 10px;
+        }
+        .box2{
+            bottom: 10px;
+        }
+        .box3{
+            bottom: 20px;
+        }
+        .box4{
+            bottom: 50px;
+        }
+
+        .flex_container{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: x-large;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+            height: 400px;
+            width: 100%;
+            border: 1px solid brown;
+        }
+        .flex-item{
+            text-align: center;
+            border: 3px solid blue;
+            border-radius: 3px;
+            background-color: lemonchiffon;
+            padding: 5px;
+            height: 80px;
+            width: 80px;
+        }
+        .item1{
+            background-color: lightblue;
+            order: 3;
+            flex-basis: 200px;
+            flex-grow: 3;
+        }
+        .item2{
+            background-color:lightpink;
+            flex-shrink: 2;
+        }
+        .item3{
+            background-color: lightgreen;
+            order: 4;
+        }
+        .item4{
+            background-color: lightsalmon;
+            order: -1;
+        }
+        .item5{
+            background-color: lightslategray;
+            order: -2;
+        }
+
+        .grid_container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            row-gap: 40px;
+            column-gap: 25px;
+            grid-auto-columns: 300px;
+        }
+        .grid-items{
+            border: 3px solid saddlebrown;
+            background-color: lavender;
+            padding: 5px;
+            text-align: center;
+        }
+        #item1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .nested-items{
+            padding: 3px;
+            border: 2px solid darkorchid;
+            background-color: snow;
+            margin: 12px;
+        }
+        #item2{
+            grid-column-start: 2;
+            grid-row-start: 4;  
+        }
+
+        .animation{
+            width: 100%;
+            height: 250px;
+            position: relative;
+            bottom: 0px;
+        }
+        #ani1,#ani2,#ani3,#ani4{
+            position: absolute;
+            bottom: 0px;
+            width: 200%;
+            transform-origin: center bottom;
+        }
+        #ani1{
+            z-index: 1000;
+            opacity: 1;
+            animation: wave 6s ease infinite alternate both;
+        }
+        #ani2{
+            z-index: 999;
+            opacity: 0.7;
+            animation: wave 5s ease 0.5s infinite alternate both;
+        }
+        #ani3{
+            z-index: 1000;
+            opacity: 0.5;
+            animation: wave 4s ease 0.5s infinite alternate both;
+        }
+        #ani4{
+            z-index: 999;
+            opacity: 0.2;
+            animation: wave 3s ease 0.5s infinite alternate both;
+        }
+        @keyframes wave {
+          0%{
+            transform: translate3d(0,0,0)  scale(1,1);
+          }
+          50%{
+            transform: translate3d(-25%,0,0)  scale(1,0.5);
+          }
+          100%{
+            transform: translate3d(-50%,0,0) scale(1,1);
+          }
+        }
+    </style>
+</head>
+<body>
+    <img id="email" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAIj6SlZRfjef2mFFJJZiMqfYfxfHk0j8YKrXPqpY&s" alt="Email Icon">
+    <div class="lorem">
+       <span>L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Quidem a nulla fugit soluta necessitatibus ducimus optio consequuntur commodi illo. Soluta reprehenderit expedita maxime minima placeat eligendi ut itaque nihil perspiciatis quis praesentium saepe repellendus ad, aspernatur nulla quam sit vitae repellat nisi cumque tenetur quos consequatur ipsam eveniet? Qui dolore consequatur dolores debitis porro laboriosam consectetur sunt, nobis dolor dolorem suscipit culpa molestiae rerum. Fugiat asperiores natus optio quo dolorem perferendis culpa vitae amet mollitia deserunt laborum enim incidunt maxime sed, vero sit magnam tempora eligendi autem quis? Vitae, sint laborum cumque voluptate adipisci ut quasi distinctio beatae. Quo, sunt.
+    </div>
+
+    <div class="name">
+    <div id="name1">
+        <h3>Name:</h3>
+        <p>I am Rahul.</p>
+    </div>
+    <div id="name2">
+        <h3>Name:</h3>
+        <p>I am Akshay.</p>
+    </div>
+    <div id="name3">
+        <h3>Name:</h3>
+        <p>I am Vijay.</p>
+    </div>
+    <div id="name4">
+        <h3>Name:</h3>
+        <p>I am Nikhil.</p>
+    </div>
+</div>
+
+<p id="lor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptates quaerat nam pariatur ex eligendi error commodi ab delectus iusto quibusdam impedit et est, temporibus nostrum consequuntur dolore cumque asperiores.</p>
+<ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Project</a></li>
+    <li><a href="">Contact</a></li>
+    <li><a href="">About</a></li>
+</ul>
+<p><img src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcRCCmoea4cozesPkjXuFdOi7uT9qmavnWUnUZ8kqREklhYtJcn7-mCnJwX7BZuS5UP6" alt="image" height="300px" style="float: left;"></p>
+<p><img src="https://www.ulcdn.net/images/products/302805/product/Berna_Table_Lamp_LP.jpg?1604133432" alt="lamp" style="float: right;" height="200px"></p>
+<p id="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odit omnis consequatur excepturi eos commodi, cum nisi, libero incidunt quae veritatis? Aperiam veritatis eaque nemo ratione velit harum veniam nisi?</p>
+
+<div class="box-set">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem eos, ipsa expedita ex hic illo ullam? Beatae veniam debitis, consequatur sequi dolore blanditiis, deserunt ea, vero tenetur consectetur ratione laborum tempore rem facere veritatis ut perferendis cumque laboriosam consequuntur eius. Voluptas esse harum nisi suscipit, libero, necessitatibus quasi dignissimos consequuntur id architecto ad aliquid perspiciatis perferendis repellendus placeat? Assumenda voluptas hic temporibus sit? Unde sapiente sequi voluptate laborum! Cupiditate, perferendis laboriosam? Velit qui repudiandae ex ipsam consequuntur sed magni, accusantium omnis sapiente placeat nisi ut nulla ad expedita mollitia ducimus temporibus error et quia quos illo atque, similique aperiam! Sequi.</p>
+<div class="flex_container">
+    <div class="flex-item item1">1</div>
+    <div class="flex-item item2">2</div>
+    <div class="flex-item item3">3</div>
+    <div class="flex-item item4">4</div>
+    <div class="flex-item item5">5</div>
+</div>
+<div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti ullam commodi totam! Eaque ipsum corporis ipsam corrupti aliquid adipisci obcaecati, amet fuga dolorum accusamus eos ullam aut distinctio officia? Aut cumque rem facilis rerum totam, tempora animi maiores voluptatibus nisi aspernatur accusantium consectetur in error libero soluta, cupiditate hic excepturi?</div>
+<div class="grid_container">
+    <div class="grid-items" id="item1">
+        <div class="nested-items">Inside the box 1</div>
+        <div class="nested-items">Inside the box 2</div>
+        <div class="nested-items">Inside the box 3</div>
+    </div>
+    <div class="grid-items" id="item2">Box 2</div>
+    <div class="grid-items">Box 3</div>
+    <div class="grid-items">Box 4</div>
+    <div class="grid-items">Box 5</div>
+    <div class="grid-items">Box 6</div>
+    <div class="grid-items">Box 7</div>
+    <div class="grid-items">Box 8</div>
+    <div class="grid-items">Box 9</div>
+    <div class="grid-items">Box 10</div>
+</div>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti odio, dolorem doloribus maxime ipsum tempora, aperiam recusandae esse omnis nisi cupiditate error, consequatur minima eligendi. Mollitia, voluptate soluta autem fuga asperiores molestias sed cum provident nulla aliquid aspernatur natus. Exercitationem vitae aperiam consequatur inventore rerum nulla unde quod ab autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora deleniti obcaecati asperiores fugiat beatae blanditiis consequuntur perspiciatis doloremque cupiditate cum odit laboriosam ea laborum facilis dolores, earum pariatur! Deserunt et consectetur illo amet rerum est doloribus, dolore architecto rem ipsa minima. Deserunt beatae perspiciatis natus ea ipsam placeat impedit eum quos blanditiis corporis esse odio tenetur, temporibus quas unde quasi aliquam ex, voluptatum omnis dicta? Dicta non corporis enim distinctio officiis? Incidunt iure sit esse alias sint quis nemo quam eaque numquam temporibus. Perferendis, cumque quo distinctio mollitia neque voluptatibus, totam velit suscipit alias molestiae voluptatum facilis deserunt cum facere!
+<div class="animation">
+    <div class="ani" id="ani1">
+        <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1d1d" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,202.7C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <div class="ani" id="ani2">
+        <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1d1d" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,202.7C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <div class="ani" id="ani3">
+        <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1d1d" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,202.7C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+    <div class="ani" id="ani4">
+        <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1d1d1d" fill-opacity="1" d="M0,128L80,149.3C160,171,320,213,480,202.7C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
+    </div>
+</div>
+</body>
+</html>

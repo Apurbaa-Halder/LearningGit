@@ -1,0 +1,104 @@
+h1{
+    padding: 5px;
+   font-family: 'Merriweather', Times, serif;
+   color: darkblue;
+}
+input[type="text"],input[type="number"],select,textarea,input[type="email"],input[type="tel"],input[type="date"]{
+    padding: 5px;
+    width: 300px;
+    border: 1px solid slategray;
+    border-radius: 3px;
+    box-shadow: 3px 2px 1px gray;
+    text-align: justify;
+}
+label{
+    display: inline-block;
+    width: 115px;
+    text-align: justify;
+    margin: 0px;
+    padding:0px !important;
+}
+textarea{
+    width: initial;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+.mainbody{
+    padding: 5px;
+}
+.form{
+    background-color:honeydew;
+    font-weight: 600;
+    box-sizing: content-box;
+    border: 3px solid brown;
+    border-radius: 7px;
+    text-align: justify;
+}
+*{
+    margin: 10px ;
+}
+#edu{
+    font-family: 'Playfair Display', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    font-size: 180%;
+    color: deeppink;
+}
+#per{
+    color: darkred;
+    font-family: 'Bacasime Antique', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+table,th,tr,td{
+    text-align: center;
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#contact{
+    font-family: 'Pathway Extreme', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: blueviolet;
+}
+thead{
+    background-color: rgb(197, 197, 250);
+}
+thead td{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: crimson;
+}
+.user{
+    background-color: lemonchiffon;
+}
+tbody td{
+    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: darkviolet;
+    background-color:rgba(252, 248, 121, 0.651);
+}
+input[type="submit"]{
+    border: 1px solid darkblue;
+    border-radius: 4px;
+    color:darkmagenta;
+    padding: 15px 30px;
+    font-family: Tahoma;
+    text-transform: uppercase;
+    width: 300px;
+    background-color: rgba(173, 216, 230, 0.695);
+    font-weight: 600;
+    font-size: large;
+    transition: all 3s steps(5, jump-end) 0.25s;
+}
+input[type="submit"]:hover{
+    color: orangered;
+    cursor: pointer;
+    background-color: lightcoral;
+    margin-right: 200px;
+    
+}
+input[type="file"]{
+    padding: 5px;
+}
+input[type="file"]:hover{
+    cursor:grab;
+}

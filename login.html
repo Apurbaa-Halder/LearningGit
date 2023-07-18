@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+        *{
+    margin: 10px;
+    box-sizing: border-box;
+        }
+        fieldset{
+            background-color: rgba(191, 252, 191, 0.726);
+            border: 2px solid darkblue;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Abril Fatface','Lucida Sans', 'Lucida Sans Regular',  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: rgb(30, 79, 255);
+        }
+        input[type="email"],input[type="password"]{
+            padding: 5px;
+            width: 100%;
+            border: 2px solid slateblue;
+            border-radius: 3px;
+            box-shadow: 3px 2px 1px slategray;
+            text-align: justify;
+        }
+        input[type="submit"]{
+            width: 200px;
+            padding: 15px 30px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: rgba(100, 148, 237, 0.867);
+            color: white;
+            font-size: 17px;
+            border: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        input[type="submit"]:hover{
+           color: red;
+           cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="./login.html,./form.html">
+        <fieldset>
+        <h1>Sign In </h1>
+        <p>Username: <input type="email"id="email"name="email" placeholder="example@cemk.ac.in"></p>
+        <p>Password: <input type="password"id="password"name="password"></p>
+        </fieldset>
+        <p align="center"><input type="submit" formaction="./home.html" value="Sign in"></p>
+        <p align="center"><input type="submit" formaction="practice.html" value="New User?"></p> 
+    </form>
+</body>
+</html>

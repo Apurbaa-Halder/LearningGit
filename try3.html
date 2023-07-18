@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>      
+        .things-container{
+            float: left;
+            display: grid;
+            grid-template-rows: repeat(5,1fr);
+            gap: 10px;
+            width: 50%;
+        }
+        .things{
+            padding: 15px;
+            border: 3px slateblue solid;
+            background-color: lightcoral;
+            text-align: center;
+            font-weight: bold;   
+        }
+        #nav{
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+        #header{
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 1;
+        }
+        #article{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        #ads{
+            grid-column-start: 4;
+            grid-row-start: 2;
+            grid-row-end: 5;
+        }
+        #footer{
+            grid-row-start: 5;
+            grid-column-start: 2;
+            grid-column-end: 5;
+            height: 80px;
+        }
+
+        footer{
+            clear: both;
+            min-height: 100px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .animation{
+            width: 100%;
+            height: 100px;
+            position: relative;
+            top: -50px;
+            left: 0px;
+        }
+        #ani1,#ani2,#ani3,#ani4{
+            background: url("http://front-end-noobs.com/jecko/img/wave-top.png");
+            background-size: 1000px 100px;
+            background-repeat: repeat-x;
+            position: relative;
+            height: 100%;
+        }
+        #ani1{
+            z-index: 1000;
+            bottom: 0px;
+            opacity: 1;
+            animation: waves 8s linear infinite ;
+        }
+        #ani2{
+            z-index: 999;
+            bottom: 110px;
+            opacity: 0.7;
+            animation: wave 7s linear 0.5s infinite ;
+        }
+        #ani3{
+            z-index: 1000;
+            bottom: 190px;
+            opacity: 0.5;
+            animation: wave 6s linear 0.5s infinite ;
+        }
+        #ani4{
+            z-index: 999;
+            bottom: 315px;
+            opacity: 0.3;
+            animation: waves 5s linear 0.5s infinite ;
+        }
+        @keyframes waves {
+          0%{
+                background-position:0px;
+            }
+            100% {
+                background-position-x: 1000px;
+            }
+        }
+           @keyframes wave {
+            0%{
+                background-position:1000px;
+            }
+            100% {
+                background-position-x: 0px;
+            } 
+        }
+        .social-icon,.menu,footer p{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        footer ul.social-icon li ,.menu li{
+            display: inline-block;
+            list-style-type: none;
+            color: #000;
+            margin:0px 10px;
+            font-size: 2em;
+            transition: 0.5s ;
+        }
+        footer p{
+            color: #000;
+            margin:10px 0px;
+            font-family: 'Verdana', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+        .menu li a{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+            opacity: 0.75;
+        }
+        footer ul.social-icon li:hover{
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+        .menu li a:hover{
+            opacity: 1;
+        }
+        input:checked + label{
+            color: red;
+        }
+        input[type="checkbox"]:checked{
+            outline:3px solid orangered;
+        }
+        input[type="radio"]:checked{
+            box-shadow: 0 0 0 3px hotpink;
+        }
+        .box-shadow{
+            display: inline-block;
+            position: relative;
+            left: 40px;
+            text-align: center;
+            padding: 10px;
+            width: 150px;
+            height: 50px;
+            border: 2px solid;
+            background-color: aliceblue;
+            box-shadow: 5px 5px 5px 3px blue inset,10px 10px 2px 4px yellow inset,15px 15px 6px 7px red inset;
+        }
+        .polaroid{
+            position: relative;
+            left: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            width: 260px;
+            height: 300px;
+            background-color: aliceblue;
+            box-shadow: 10px 10px 5px slategray;
+        }
+        .right{
+            transform: rotate(10deg);
+        }
+        .left{
+            transform: rotate(-8deg);
+        }
+        .switch{
+            display:inline-block;
+            position: relative;
+            width: 120px;
+            height: 40px;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        #switch{
+            display: none;
+        }
+        .toggle-label{
+            display: block;
+            position: relative;
+            font-size: medium;
+            height: inherit;
+            background-color: red;
+            border-radius: inherit;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.213),inset 0 0 3px rgba(0, 0, 0, 0.122);
+        }
+        .toggle-label::before{
+            content: attr(data-off);
+            right: 12px;
+            color: #fff;
+            text-shadow: 2px 0px 2px aliceblue;
+        }
+        .toggle-label::after,.toggle-label::before{
+            position: absolute;
+            top: 50%;
+            margin: -0.5em;
+            line-height: 1;
+        }
+        .toggle-label::after{
+            content: attr(data-on);
+            left: 12px;
+            color: #fff;
+            text-shadow: 2px 0px 2px aliceblue;
+            opacity: 0;
+        }
+        #switch:checked~.toggle-label{
+            background-color: green;
+        }
+        #switch:checked~.toggle-label::before{
+            opacity: 0;
+        }
+        #switch:checked~.toggle-label::after{
+            opacity: 1;
+        }
+        .toggle-handle{
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, white 40%,rgb(196, 196, 248));
+        }
+        #switch:checked~.toggle-handle{
+            left: 86px;
+            box-shadow: 1px 1px 5px #00000025;
+        }
+        .toggle-label,.toggle-handle{
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <p>
+    <div class="things-container">
+        <div class="things" id="nav">Nav</div>
+        <div class="things" id="header">Header</div>
+        <div class="things" id="article">Article</div>
+        <div class="things" id="ads">Ads</div>
+        <div class="things" id="footer">Footer</div>
+        </div>
+    </p>
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox">Yes</label>
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <label for="checkbox">No</label>
+    <input type="radio" name="gender" id="boy">
+    <label for="boy">Boy</label>
+    <input type="radio" name="gender" id="Girl">
+    <label for="Girl">Girl</label>
+    <div class="box-shadow">Box Shadow</div> <br>
+    <div class="polaroid right">
+        <img src="https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-457882.jpg&fm=jpg" alt="Image1" width="250px">
+        <p>Seas can calm human minds and give them relief from stress.</p>
+    </div>
+    <div class="polaroid left">
+        <img src="https://thumbs.dreamstime.com/b/footbridge-sea-beach-meditation-journey-calm-hormone-sunset-sea-yoga-footbridge-sea-beach-meditation-journey-calm-hormone-128381503.jpg" alt="Image2" width="250px" height="160px">
+        <p>Maldives are one of the world's most popular place to enjoy sea.</p>
+    </div> <br>
+    <label class="switch">
+        <input type="checkbox" name="switch" id="switch">
+        <span class="toggle-label" data-off="OFF" data-on="ON"></span>
+        <span class="toggle-handle"></span>
+    </label>
+        <footer>
+            <div class="animation">
+                <div class="wave" id="ani1"></div>
+                <div class="wave" id="ani2"></div>
+                <div class="wave" id="ani3"></div>
+                <div class="wave" id="ani4"></div>
+            </div>
+            <ul class="social-icon">
+           <li><ion-icon name="logo-facebook"></ion-icon></li>
+           <li><ion-icon name="logo-twitter"></ion-icon></li>
+           <li><ion-icon name="logo-linkedin"></ion-icon></li>
+           <li><ion-icon name="logo-instagram"></ion-icon></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Services</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Team</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+        </ul>
+       <p>&copy;2016 Marvels|All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

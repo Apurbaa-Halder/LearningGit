@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS styling</title>
+    <style>
+        ul,li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            width: 33.3333%;
+        }
+
+        .inline li {
+            display: inline-block;
+            background-color: gold;
+        }
+
+        .float li {
+            float: left;
+            background-color: indianred;
+        }
+
+        .flex {
+            clear: left ;
+            display: flex;
+            background-color: skyblue;
+        }
+
+        .flex-container1,.flex-container2,.flex-container3{
+          display: flex;
+        }
+        .item1,.item2,.item3{
+          height: 150px;
+          width: 33.3333%;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: x-large;
+          color: white;
+          background-color: chocolate;
+          padding: 5px;
+          border-radius: 10px;
+          margin: 5px;
+        }
+        .flex-items,.flex-item{
+          width: 25%;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: x-large;
+          color: white;
+          background-color: chocolate;
+          padding: 5px;
+          border-radius: 10px;
+          margin: 5px;
+        }
+        .numbers,.number{
+          width: 20%;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: x-large;
+          color: white;
+          background-color: chocolate;
+          padding: 5px;
+          border-radius: 10px;
+          margin: 5px;
+        }
+        .item{
+          width: 33.33333%;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: x-large;
+        }
+        .flex-item,.number,.item{
+          background-color: white;
+          color: chocolate;
+          margin: 2px;
+          border-radius: 4px;  
+        }
+
+        .gola{
+          float: right;
+          width: 200px;
+          height: 200px;
+          background-color: cadetblue;
+          animation-name: circle;
+          animation-duration: 4s;
+          transition: all 5s ease-in-out 0.5s;
+        }
+        .gola:hover{
+          background-color: crimson;
+          width: 350px;
+          height: 350px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+        
+        @keyframes circle{
+          from {background-color:cadetblue;}
+          to {background-color: chocolate;}
+        }
+
+        .square{
+          width: 200px;
+          height: 150px;
+          background-color: green;
+          position: relative;
+          animation: chouko 8s ease-in-out 0.5s 2 alternate-reverse;
+        }
+
+        @keyframes chouko {
+          0% {background-color: green; left: 0px; top: 0px;}
+          25% {background-color: yellow; left: 200px; top:0px;}
+          50% {background-color: blue; left: 200px; top: 200px;}
+          75% {background-color: red; left: 0px; top: 200px;}
+          100%{background-color: green; left: 0px; top: 0px;}
+        }
+
+        .speed{
+          position: relative;
+          left: 500px;
+          width: 100px;
+          height: 100px;
+          font-weight: bold;
+          text-align: center;
+          padding: 5px;
+          animation: race 5s 1s infinite alternate-reverse;
+        }
+        #first{
+          background-color: aqua;
+          animation-timing-function: linear;
+        }
+        #second{
+          background-color: lawngreen;
+          animation-timing-function: ease;
+        }
+        #third{
+          background-color: lightpink;
+          animation-timing-function: ease-in;
+        }
+        #fourth{
+          background-color: khaki;
+          animation-timing-function: ease-out;
+        }
+        #fifth{
+          background-color: violet;
+          animation-timing-function: ease-in-out;
+        }
+        @keyframes race {
+          from {left: 500px;}
+          to {left: 900px;}
+        }
+
+        #load{
+          animation: loading 0.75s ease infinite alternate both;
+          background-color: darkblue;
+          color: white;
+          text-decoration: none;
+          border-radius: 50%;
+          padding: 1em 2em 1.1em;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          display: inline-block;
+          cursor: pointer;
+          font-size: xx-large;
+          position: relative;
+          vertical-align: top;
+          margin-top: 200px;
+          left: 50px;
+        }
+        @keyframes loading {
+          0%{
+            bottom: 0px; 
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.822);
+          }
+          25%{
+            transform: scaleX(-1);
+          }
+          50%{
+            transform: scaleY(-1);
+          }
+          75%{
+            transform: scaleZ(-1);
+          }
+          100% {
+            bottom: 100px; 
+            box-shadow: 0 100px 100px rgba(0, 0, 0, 0.182);
+          }
+        }
+
+        #css{
+          animation: css 6s ease 1s infinite alternate both;
+          display: inline-block;
+          width: 75px;
+          height: 50px;
+          background-color: darkred;
+          color: white;
+          border-radius: 10px;
+          position: relative;
+          left: 400px;
+          padding: 20px;
+          top: 50px;
+          text-decoration: none;
+          font-size: xx-large;
+        }
+        @keyframes css {
+          0%{
+            transform: rotate(0deg);
+            left: 400px;
+            background-color: darkred;
+          }
+          25%{
+            transform: rotate(45deg);
+            left: 400px;
+            background-color: darkorchid;
+          }
+          50%{
+            transform: rotate(90deg);
+            left: 900px;
+            background-color: darkorange;
+          }
+          75%{
+            transform: rotate(180deg);
+            left: 900px;
+            background-color: darkgreen;
+          }
+          100%{
+            transform: rotate(-360deg);
+            left: 400px;
+            background-color: darkblue;
+          }
+        }
+        .grid{
+          display: grid;
+          grid-template-columns: repeat(6,minmax(200px,1fr));
+          grid-template-rows: repeat(12,1fr);
+          gap: 20px;
+          font-size: xx-large;
+          text-align:center;
+        }
+        .grid-items{
+          background-color: deepskyblue;
+        }
+        #one,#two,#four,#seven,#eleven,#seventeen{
+          grid-row-start: 1;
+        }
+        #one,#three,#six,#ten,#sixteen{
+          grid-row-end: 13;
+        }
+        #two,#thirteen{
+          grid-row-end: 7;
+        }
+        #three,#fourteen{
+          grid-row-start: 7;
+        }
+        #four,#twelve{
+          grid-row-end: 5;
+        }
+        #five{
+          grid-row-start: 5;
+          grid-row-end: 9;
+        }
+        #six,#fifteen{
+          grid-row-start: 9;
+        }
+        #seven{
+          grid-row-end: 4;
+        }
+        #eight{
+          grid-row-start: 4;
+          grid-row-end: 7;
+        }
+        #nine{
+          grid-row-start: 7;
+          grid-row-end: 10;
+        }
+        #ten{
+          grid-row-start: 10;
+        }
+        #eleven{
+          grid-row-end:3;
+        }
+        #twelve{
+          grid-row-start: 3;
+        }
+        #thirteen{
+          grid-row-start: 5;
+        }
+        #fourteen{
+          grid-row-end: 9;
+        }
+        #fifteen{
+          grid-row-end: 11;
+        }
+        #sixteen{
+          grid-row-start: 11;
+        }
+    </style>
+</head>
+<body>
+    <ul class="inline">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+      
+      <ul class="float">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+      
+      <ul class="flex">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+
+      <div id="flex">
+      <div class="flex-container1">
+        <div class="item1">1
+          <div class="flex-container1" id="fc1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>  
+          </div>
+    
+          <div class="flex-container2" id="fc2">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+          </div>
+    
+            <div class="flex-container3" id="fc3">
+              <div class="number">1</div>
+              <div class="number">2</div>
+              <div class="number">3</div>
+              <div class="number">4</div>
+              <div class="number">5</div>
+            </div>
+        </div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>  
+      </div>
+
+      <div class="flex-container2">
+        <div class="flex-items">1</div>
+        <div class="flex-items">2</div>
+        <div class="flex-items">3</div>
+        <div class="flex-items">4</div>
+      </div>
+
+        <div class="flex-container3">
+          <div class="numbers">1</div>
+          <div class="numbers">2</div>
+          <div class="numbers">3</div>
+          <div class="numbers">4</div>
+          <div class="numbers">5</div>
+        </div>
+    </div>
+    <div class="gola"></div>
+    <div class="square"></div>
+    <div class="speed" id="first">Linear</div>
+    <div class="speed" id="second">Ease</div>
+    <div class="speed" id="third">Ease-in</div>
+    <div class="speed" id="fourth">Ease-out</div>
+    <div class="speed" id="fifth">Ease-in-out</div>
+    <hr>
+    <a href="#" id="load">Loading</a>
+    <a href="#" id="css">CSS</a>
+    <hr>
+    <div class="grid">
+      <div class="grid-items" id="one">1</div>
+      <div class="grid-items" id="two">2</div>
+      <div class="grid-items" id="three">3</div>
+      <div class="grid-items" id="four">4</div>
+      <div class="grid-items" id="five">5</div>
+      <div class="grid-items" id="six">6</div>
+      <div class="grid-items" id="seven">7</div>
+      <div class="grid-items" id="eight">8</div>
+      <div class="grid-items" id="nine">9</div>
+      <div class="grid-items" id="ten">10</div>
+      <div class="grid-items" id="eleven">11</div>
+      <div class="grid-items" id="twelve">12</div>
+      <div class="grid-items" id="thirteen">13</div>
+      <div class="grid-items" id="fourteen">14</div>
+      <div class="grid-items" id="fifteen">15</div>
+      <div class="grid-items" id="sixteen">16</div>
+      <div class="grid-items" id="seventeen">17</div>
+      <div class="grid-items">18</div>
+      <div class="grid-items">19</div>
+      <div class="grid-items">20</div>
+      <div class="grid-items">21</div>
+      <div class="grid-items">22</div>
+      <div class="grid-items">23</div>
+      <div class="grid-items">24</div>
+      <div class="grid-items">25</div>
+      <div class="grid-items">26</div>
+      <div class="grid-items">27</div>
+      <div class="grid-items">28</div>
+    </div>
+</body>
+</html>
