@@ -64,6 +64,9 @@
             text-transform: uppercase;
             text-shadow: 5px 6px 3px blue;
         }
+        hr{
+            clear: both;
+        }
         .lorem{
             text-align: justify;
             text-indent: 5em;
@@ -75,6 +78,9 @@
             border-width: 6px;
             border-style: dashed;
             border-color: darkmagenta;
+        }
+        table{
+            float: left;
         }
         table,tr,th,td{
             border: 2px solid black;
@@ -180,6 +186,25 @@
             cursor: pointer;
             opacity: 1;
         }
+        .js{
+            position: relative;
+            left: 50px;
+        }
+        button{
+            width: 200px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: silver;
+            font-size: larger;
+            color: dodgerblue;
+            font-weight: bolder;
+        }
+        button:hover{
+            background-color: bisque;
+            color: darkblue;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -282,6 +307,11 @@
             <th>1450</th>
         </tfoot>
     </table>
+    <div class="js">
+    <h1>Demo JS</h1>
+    <button>Hello World!</button>&emsp;
+    <button style="width: fit-content;">Roll No. 1: Ayan Roy</button>
+</div>
     <hr>
     <div class="background">
     <h1 id="Form"><u>Payment Form</u></h1>
@@ -322,6 +352,6 @@ Expiration Date: <input type="date" name="exp_date" id="exp_date"> CVV: <input t
 <input type="submit" value="Pay Now"> &emsp; <input type="reset" value="Clear">
 </form>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
