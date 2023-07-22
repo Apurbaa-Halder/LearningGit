@@ -13,6 +13,113 @@
         var modeOfPayment;
         modeOfPayment=prompt("Enter the mode of payment:");
         alert("Soumya bought the car using "+modeOfPayment);
+        var time=prompt("Hey what's the time?");
+        if(time>=5 && time<12){
+            alert("Good Morning");
+        }
+        else if(time>=12 && time<17){
+            alert("Good Afternoon");
+        }
+        else if(time>=17 && time<20){
+            alert("Good Evening");
+        }
+        else {
+            alert("Good Night");
+        }
+        var t=3==='3';
+        console.log(t);
+        var appliances=prompt("Which appliance to switch on?");
+        switch(appliances){
+            case 'fan':
+                alert("Fan turned on");
+                break;
+            case 'tubelight':
+                alert("Tubelight turned on");
+                break;
+            case 'tv':
+                alert("TV turned on");
+                break;
+            case 'bulb':
+                alert("Bulb turned on");
+                break;
+            case 'ac':
+                alert("AC turned on");
+                break;
+            default:
+                alert(`${appliances} is not working`);
+        }
+        for(let i=0;i<=10;i++)
+            console.log(i);
+        for(let j=5;j<51;j+=5){
+            if(j%2==0)
+            console.log(j+" is even");
+            else
+            console.log(j+" is odd");
+        }
+        let k=0;
+        while(k<10){
+            console.log(k);
+            k++;
+        }
+        let d=20;
+        do{
+            d-=2;
+            console.log(d);
+        }while(d>0);
+        let animal={//animal is an object
+            name:"Giraffe",
+            leg:4
+        };
+        console.log(animal);
+        for(let key in animal){// for...in loop
+            console.log(key,animal[key]);
+        }
+        //Dot Notation
+        console.log(animal.name);
+        console.log(animal.leg);
+        let legsProp="leg";
+        console.log(animal[legsProp]);
+        let names=["RaKesh","MaHeSh","ViJAy","ARjUn"];//array
+        console.log(names);
+        for(let i in names){
+            console.log(i,names[i]);
+        }
+        for(let j of names){//for...of loop
+            console.log(j)
+        }
+        function sum(a,b){
+            console.log(a+b);
+        }
+        function product(x,y){
+            return x*y;
+        }
+        sum(4,6);
+        let p=product(25,5);
+        console.log(p);
+        let st="The sky is blue."
+        console.log(st.length);
+        console.log(st.charAt(6));
+        const words=st.split(' ');
+        console.log(words[3]);
+        console.log(st.indexOf("b"));
+        console.log(st.slice(4,7));//same as substring
+        console.log(st.toUpperCase());
+        for(let i=0;i<names.length;i++){
+            let ch=names[i].charAt(0);
+            ch=ch.toUpperCase();
+            let ch1=names[i].substring(1);
+            ch1=ch1.toLowerCase();
+            console.log(ch+ch1);
+        }
+        let arr=["Happy Birthday!","Happy Holi to all","Holi Mubarak","Get well soon","Happy anniversary Mom Dad!"];
+        for(let i=0;i<arr.length;i++){
+            if(arr[i].indexOf("Holi")!=-1)
+            console.log(arr[i]);
+        }
+        function fname(name){
+            console.log(`Hii ${name}`);
+        }
+        fname("Apu");
     </script>
 </body>
 </html>
