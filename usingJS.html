@@ -120,6 +120,21 @@
             console.log(`Hii ${name}`);
         }
         fname("Apu");
+        const course={ //creating object 'course'
+            lecture:10,
+            section:3,
+            title:"javascript",
+            notes:{
+                introduction:"Welcome"
+            },
+            enroll(){
+                console.log("You are successfully enrolled");
+            }
+        };
+        course.enroll();
+        console.log(course.title);
+        console.log(course);
+        course.price =1000;
     </script>
 </body>
 </html>
