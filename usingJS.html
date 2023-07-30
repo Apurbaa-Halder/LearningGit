@@ -6,7 +6,7 @@
     <title>Demo JS</title>
 </head>
 <body>
-    <h1>Using Datatypes</h1>
+    <h1>Using JavaScript</h1>
     <script>
         var bool=20000457896312n;
         console.log(typeof bool);
@@ -79,7 +79,7 @@
         console.log(animal.leg);
         let legsProp="leg";
         console.log(animal[legsProp]);
-        let names=["RaKesh","MaHeSh","ViJAy","ARjUn"];//array
+        let names=["RaKesh","maHeSh","ViJAy","aRjUn"];//array
         console.log(names);
         for(let i in names){
             console.log(i,names[i]);
@@ -131,10 +131,129 @@
                 console.log("You are successfully enrolled");
             }
         };
+        delete course.lecture;
+        course.chapter=function(){
+            console.log("10 chapters are there.");
+        }
+        console.log(course.constructor);
         course.enroll();
+        course.chapter();
         console.log(course.title);
         console.log(course);
         course.price =1000;
+        //Factory function
+        function create(){
+            const classes={
+                mon:4,
+                tues:5,
+                subject:"Geography"
+            };
+            return classes;
+        }
+        console.log(create());
+        function createcourse(sub){//otherwise
+            return{
+                mon:4,
+                tues:5,
+                subject:sub
+            };
+        }
+        const classes=createcourse("Computer");
+        console.log(classes);
+        //Constructor function
+        function Course(title){
+            this.lecture=10,
+            this.title=title,
+            this.enroll=function(){
+                console.log("You are successfully enrolled");
+            };
+        }
+        const courses=new Course("English");
+        console.log(courses.constructor);
+        console.log(courses);
+        courses.enroll();
+        //creating constructor function using Function() constructor
+        const Course1=new Function('title',`
+            this.lecture=10,
+            this.title=title,
+            this.enroll=function(){
+                console.log("You are enrolled");
+            }`)
+            const Course2=new Course1("JS");
+            console.log(Course2);
+            Course2.enroll();
+        var day="Monday";
+        console.log(day);
+        let n=777;//Pass by value
+        num=n;
+        n=n/10;
+        console.log(n);
+        console.log(num);
+        let obj={time:"2pm"};//Pass by reference
+        obj1=obj;
+        obj.time="4pm"
+        console.log(obj);
+        console.log(obj1);
+        //using spread operator changing pass by ref to pass by value 
+        let Animal={
+            name:"Cow",
+            legs:4
+        };
+        let Animal1={...Animal};
+        Animal1.name="Tiger"
+        console.log(Animal);
+        console.log(Animal1);
+        //using object assign function to change pass by ref to pass by value 
+        let bird={
+            name:"Sparrow"
+        };
+        let Bird1=Object.assign({},bird);
+        bird.name="Nightingale"
+        console.log(bird);
+        console.log(Bird1);
+        let app={
+            name:"Fan",
+            price:"500"
+        };
+        for(let x in app)
+            console.log(x,app[x]);
+        
+        for(let key of Object.keys(app))
+            console.log(app[key]);
+        
+        let applian={};
+        for(let i in app)
+            applian[i]=app[i];
+        console.log(applian);
+        const Product={
+            itemName:"Flower",
+            price:500,
+            discount:10,
+            itemCode:"f21ghdec2022"
+        };
+        console.log(Product);
+        function item(){
+            return{
+            itemName:"Flower",
+            price:500,
+            discount:10,
+            itemCode:"f21ghdec2022"
+            }
+        };
+        const sale=item();
+        console.log(sale);
+        function createItem(price,discount){
+           this.itemName="Flower",
+           this.price=price,
+           this.discount=discount,
+           this.itemCode="f21ghdec2022",
+           this.discountValue=function(){
+            return price*discount/100;
+           }
+        };
+        const Item=new createItem(30000,20);
+        console.log(Item);
+        console.log(Item.discountValue());
     </script>
 </body>
 </html>
