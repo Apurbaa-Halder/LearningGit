@@ -254,6 +254,54 @@
         const Item=new createItem(30000,20);
         console.log(Item);
         console.log(Item.discountValue());
+        class Things{ //declaring class
+            constructor(itemName,price,discount,itemCode){
+            this.itemName=itemName,
+            this.price=price,
+            this.discount=discount,
+            this.itemCode=itemCode
+            }
+            get getDiscountValue(){
+                return this.discount;
+            }
+            set setDiscountvalue(value){
+                this.discount=value;
+            }
+            discountValue(){
+                return this.discount*this.price/100;
+            }
+        }
+        let PRODUCT= new Things("Bouquet",1000,5,"B40");
+        console.log(PRODUCT);
+        const product1=class Things{ //using class as expression
+            constructor(itemName,price,discount,itemCode){
+            this.itemName=itemName,
+            this.price=price,
+            this.discount=discount,
+            this.itemCode=itemCode
+            }
+        }
+        let product2=new product1("chair",500,10,"Ch45");
+        console.log(product2);
+        class product3{
+            constructor(itemName){
+                console.log("Passed by Furniture "+itemName);
+                this.itemName=itemName;
+            }
+            getItemName(){
+                return this.itemName+" is a Product";
+            }
+        }
+        class Furniture extends product3{
+            constructor(itemName){
+                super(itemName);
+            }
+            getItemName(){
+                return this.itemName+" is a Furniture";
+            }
+        }
+        let pencil=new product3("Pencil");
+        let chair=new Furniture("Chair");
     </script>
 </body>
 </html>
