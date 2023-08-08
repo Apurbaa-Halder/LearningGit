@@ -302,6 +302,7 @@
         }
         let pencil=new product3("Pencil");
         let chair=new Furniture("Chair");
+        //using arrays
         const array=[1,2,3,4,5,6];
         console.log(array);
         console.log(`Last index element ${array[array.length-1]}`);
@@ -315,6 +316,55 @@
         console.log(Num);
         Num.shift();
         console.log(Num);
+        const Names=["Vijay","Rohan","Akash","Farhan","Kartik","Akash"];
+        console.log(Names.lastIndexOf("Akash"));
+        console.log(Names.indexOf("Akash",3));
+        console.log(Names.includes("Kartik"));
+        let channels=[{
+            name:"Apna College",
+            subscriber:10000
+        }, {
+            name:"Apna Kaksha",
+            subscriber:20000
+        }, {
+            name:"Apna Siksha",
+            subscriber:50000
+        }];
+        console.log(channels.find(function (element){
+            return element.subscriber===50000;
+        }));
+        console.log(channels.find(element => element.name=="Apna College"));
+        let val1=[1,2,3];
+        let val2=[4,5,6];
+        console.log(val1.concat(val2));
+        let val3=val1.concat(val2);
+        console.log(val3.slice(3,5));
+        let val4=[...val1,...val2];
+        console.log(val4);
+        for(let i=0;i<Names.length;i++)
+            console.log(Names[i]);
+        for(let x of val3)
+            console.log(x);
+        Names.forEach(function(name,index){
+            console.log(name,index);
+        });
+        let string=["S","t","a","r","k"];
+        console.log(string.join(''));
+        string=string.join('_');
+        console.log(string.split('_'));
+        let cities=[
+            {name:"Mumbai",population:8054625},
+            {name:"Delhi",population:6012478},
+            {name:"Bangalore",population:7215789},
+            {name:"Punjab",population:2014578},
+            {name:"Shimla",population:1004578}
+        ];
+        console.log(cities.filter(city => city.population>3000000));
+        console.log(val3.map(x => x*2));
+        console.log(cities.map(city => city.population/100));
+        console.log(val3.fill(0,3,5));
+        console.log(val3.fill(5,2));
+        console.log(val3.fill(8));
     </script>
 </body>
 </html>
