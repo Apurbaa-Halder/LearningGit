@@ -365,6 +365,24 @@
         console.log(val3.fill(0,3,5));
         console.log(val3.fill(5,2));
         console.log(val3.fill(8));
+        const characters=[
+            {name:"Suraj",mass:82,height:172,eye_color:"brown"},
+            {name:"Rehan",mass:96,height:166,eye_color:"black"},
+            {name:"Sheetal",mass:56,height:160,eye_color:"blue"},
+            {name:"Kavya",mass:79,height:180,eye_color:"black"}
+        ];
+        const newcharacter=characters.map(ch => ch.name);
+        console.log(newcharacter);
+        const propofch=characters.map(ch =>{
+            return {name:ch.name,height:ch.height}
+        });
+        const chHeight=characters.map(ch => ch.height);
+        const reducer=chHeight.reduce((previousValue,currentValue) => previousValue+currentValue);
+        console.log(`${reducer} is the total height of all characters`);
+        console.log(propofch);
+        const numbers=[1,4,9];
+        const root=numbers.map(num => Math.sqrt(num));
+        console.log(root);
     </script>
 </body>
 </html>
