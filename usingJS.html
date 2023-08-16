@@ -403,6 +403,129 @@
         const string1=["Blue","Red","Green","Yellow"];
         console.log(num1.sort((a,b) => a-b));
         console.log(string1.sort());
+        var name='Ajay';
+        if(true){
+            let f=10;
+            console.log(f);
+        }
+        sayHello();
+        console.log(i);
+        function sayHello(){
+            var x=100;
+            console.log("Hello");
+            console.log(x);
+        }
+        var i=10;
+        let counter={ //this is object literal
+            count:0,
+            increment(){
+                this.count++;
+            }
+        }
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        console.log(counter);
+        counter.increment();
+        console.log(counter);
+        function createCounter(){ //factory function
+            return{
+                count:0,
+            increment(){
+                this.count++;
+                console.log(this);
+            }
+            }
+        }
+        let counter1=createCounter();
+        let counter2=createCounter();
+        counter1.increment();
+        counter1.increment();
+        counter2.increment();
+        counter2.increment();
+        counter2.increment();
+        console.log(counter1);
+        console.log(counter2);
+        var e=45;
+        function incrementVariable(){
+            this.e++;
+            console.log(this);
+        }
+        incrementVariable();
+        incrementVariable();
+        incrementVariable();
+        console.log(e);
+        console.log(this);
+        function Car(name){ //constructor function
+            this.name=name;
+            this.start=function(){
+                console.log(this.name+" started");
+                console.log(this);
+            }
+        }
+        let farrari=new Car('Farrari');// without new keyword this refers to Window object so Car can't be accessed 
+        farrari.start();
+        console.log(farrari);
+        function square(side){
+            this.side=side;
+            this.area=4*side;
+            }
+            let sqarea=new square(10);
+            console.log(sqarea.area);
+            let square1={
+                side:10,
+                get area(){
+                    return this.side*4;
+                }
+            }
+            console.log(square1.area);
+            let sky=["Iron","Man","is","a","legend"];
+            console.log(sky.join(" "));
+            let sky1='';
+            for(let i=0;i<sky.length;i++)
+                sky1+=sky[i]+" ";
+            console.log(sky1);
+            let mcu="Avengers is the best superhero series."
+            let word=mcu.split(" ");
+            for(let i=0;i<word.length;i++)
+            console.log(word[i]+" ");
+            function stringConcat(separator,...strings){
+                let s1='';
+                strings.forEach((string,i) => s1+=string+separator);
+                return s1;
+            }
+            console.log(stringConcat(" ","this","is","valid"));
+            let arr1=[1,2,3,4,5,6,7,8];
+            let other=arr1.slice(3);
+            console.log(other);
+            //Destructuring of array
+            let [first,second,third,...others]=[1,2,3,4,5,6,7,8];
+            console.log(first);
+            console.log(second);
+            console.log(third);
+            console.log(others);
+            //non recursive way
+            let match=0;
+            function matchHouses(House){
+                for(let i=0;i<House;i++){
+                    if(i===0)
+                    match+=6;
+                    else
+                    match+=5;
+                }
+                return match;
+            }
+            let matchno=matchHouses(10);
+            console.log(`No.of matches required to make 10 houses is ${matchno}`);
+            //recursive way
+            function Housematchno(House){
+                if(House===0)
+                return 0;
+                else
+                return House*6-(House-1);
+            }
+            console.log(Housematchno(90));
     </script>
 </body>
 </html>
