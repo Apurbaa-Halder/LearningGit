@@ -23,6 +23,11 @@
         <li class="list-item">Second element</li>
         <li class="list-item">Third element</li>
     </ul>
+    <!--<div class="alldivs">First div</div>
+    <script>
+        console.log(document.querySelector(".alldivs"));
+    </script>
+    <div class="alldivs">Second div</div>-->
     <table name="table">
         <thead class="heading">
             <tr>
@@ -144,6 +149,12 @@
         }
         console.log(document.getElementsByTagName("table"))
         console.log(document.getElementsByName("table"))
+        console.log(document.querySelector(".list-item"))
+        console.log(document.querySelectorAll(".list-item"))
+        console.log(document.querySelector("#element"));
+        console.log(document.querySelectorAll('ul>li:last-child'));
+        console.log(document.querySelectorAll('ul>li:nth-child(2)'));
+        //console.log(document.querySelector(".alldivs"));
     </script>
 </body>
 </html>
