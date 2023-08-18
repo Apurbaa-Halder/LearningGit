@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        table,tr,td{
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        table{
+            margin: 5px;
+        }
+        td{
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="element" >
+        <li class="list-item">First element</li>
+        <li class="list-item">Second element</li>
+        <li class="list-item">Third element</li>
+    </ul>
+    <table name="table">
+        <thead class="heading">
+            <tr>
+                <th colspan="2">Numbers</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>Three</td>
+            <td>Four</td>
+        </tr>
+    </tbody>
+    </table>
+    <table>
+        <tr>
+            <td>1:1</td>
+            <td>2:1</td>
+            <td>3:1</td>
+            <td>4:1</td>
+            <td>5:1</td>
+        </tr>
+        <tr>
+            <td>1:2</td>
+            <td>2:2</td>
+            <td>3:2</td>
+            <td>4:2</td>
+            <td>5:2</td>
+        </tr>
+        <tr>
+            <td>1:3</td>
+            <td>2:3</td>
+            <td>3:3</td>
+            <td>4:3</td>
+            <td>5:3</td>
+        </tr>
+        <tr>
+            <td>1:4</td>
+            <td>2:4</td>
+            <td>3:4</td>
+            <td>4:4</td>
+            <td>5:4</td>
+        </tr>
+        <tr>
+            <td>1:5</td>
+            <td>2:5</td>
+            <td>3:5</td>
+            <td>4:5</td>
+            <td>5:5</td>
+        </tr>
+    </table>
+    <script>
+        //Root node
+        console.log(document.documentElement);
+        console.log(document.body);
+        console.log(document.head);
+        console.log(document.body.childNodes);
+        console.log(document.body.children);
+        // for traversal
+        console.log("Traversing the child nodes:")
+        for(node of document.body.children){
+            console.log(node);
+        }
+        console.log("Storing in array the child nodes:");
+        console.log(Array.from(document.body.children))
+        console.log("Displaying 1st and last child:")
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        console.log(document.body.firstElementChild.tagName);
+        console.log(document.body.firstElementChild.textContent);
+        console.log(document.body.lastElementChild);
+        //siblings
+        const ulTag=document.body.children[0];
+        console.log(ulTag.previousSibling);
+        console.log(ulTag.previousElementSibling);
+        console.log(ulTag.nextSibling);
+        console.log(ulTag.nextElementSibling);
+        const liTag=ulTag.children[1];
+        console.log(liTag.parentNode);
+        console.log(liTag.previousSibling.textContent);
+        console.log(liTag.previousElementSibling.tagName);
+        console.log(liTag.nextSibling.textContent);
+        console.log(liTag.nextElementSibling.textContent);
+        // Table DOM Manipulation
+        const Tabletag=document.body.children[1];
+        console.log(Tabletag.tBodies)
+        console.log(Tabletag.tBodies[1].rows)
+        console.log(Tabletag.tBodies[1].rows[0].cells)
+        console.log(Tabletag.tBodies[1].rows[0].cells[1].textContent)
+        console.log(Tabletag.tBodies[1].rows[0].cells[1].style="background-color:pink;")
+        console.log(Tabletag.tBodies[0].rows[0].cells[0].textContent);
+        console.log(Tabletag.tBodies[0].rows[0].cells[0].style="color:darkblue;");
+        console.log(Tabletag.rows)
+        const table2=document.body.children[2];
+        console.log(table2.rows[0].style="background-color:violet;")
+        console.log(table2.rows[1].style="background-color:slateblue;")
+        console.log(table2.rows[2].style="background-color:lavender;")
+        console.log(table2.rows[3].style="background-color:green;")
+        console.log(table2.rows[4].style="background-color:skyblue;")
+        //Id search
+        console.log(element)
+        element.style.background="yellow";
+        const ul=document.getElementById("element");
+        ul.style.color="red";
+        const thead=document.getElementsByClassName("heading");
+        console.log(thead)
+        for(i of thead){
+            i.style.background="purple";
+        }
+        const list=document.getElementsByClassName("list-item");
+        console.log(list)
+        for(i of list){
+            i.style.fontWeight="bold";
+        }
+        console.log(document.getElementsByTagName("table"))
+        console.log(document.getElementsByName("table"))
+    </script>
+</body>
+</html>
