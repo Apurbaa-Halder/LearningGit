@@ -15,11 +15,14 @@
         td{
             padding: 2px;
         }
+        a{
+            text-decoration: none;
+        }
     </style>
 </head>
-<body>
-    <ul id="element" >
-        <li class="list-item">First element</li>
+<body id="body">
+    <ul id="element" data="valid">
+        <li id="First" class="list-item">First element</li>
         <li class="list-item">Second element</li>
         <li class="list-item">Third element</li>
     </ul>
@@ -84,6 +87,15 @@
             <td>5:5</td>
         </tr>
     </table>
+    <a name="the_list">The list:</a>
+    <ul>
+        <li><a href="http://google.com">http://google.com</a></li>
+        <li><a href="/tutorial">/tutorial.html</a></li>
+        <li><a href="local/path">local/path</a></li>
+        <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+      </ul>
     <script>
         //Root node
         console.log(document.documentElement);
@@ -155,6 +167,29 @@
         console.log(document.querySelectorAll('ul>li:last-child'));
         console.log(document.querySelectorAll('ul>li:nth-child(2)'));
         //console.log(document.querySelector(".alldivs"));
+        console.log(element.id);
+        console.log(element.getAttribute("data"));
+        console.log(element.setAttribute("order","pending"));
+        console.log(element.getAttribute("order"));
+        console.log(element.hasAttribute("class"));
+        console.log(element.removeAttribute("data"));
+        console.log(element.hasAttribute("data"));
+        let selector='a[href*="://"]:not(a[href^="http://internal.com"])';
+        let links=document.querySelectorAll(selector);
+        console.log(links);
+        for(i of links)
+            i.style.color="green";
+        //creating,removing or updating node elements
+        const newDiv=document.createElement('div');
+       // newDiv.textContent="Hurray we won!"
+        let newText=document.createTextNode("Hello World!");
+        newDiv.appendChild(newText);
+        body.append(newDiv);
+        //body.prepend(newDiv)
+        //body.before(newDiv)
+        //body.after(newDiv)
+       // First.replaceWith(newDiv);
+       //First.remove();
     </script>
 </body>
 </html>
