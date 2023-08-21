@@ -26,12 +26,12 @@
         <li class="list-item">Second element</li>
         <li class="list-item">Third element</li>
     </ul>
-    <!--<div class="alldivs">First div</div>
+    <div class="alldivs">First div</div>
     <script>
         console.log(document.querySelector(".alldivs"));
     </script>
-    <div class="alldivs">Second div</div>-->
-    <table name="table">
+    <div class="alldivs">Second div</div>
+    <table id="table" name="table">
         <thead class="heading">
             <tr>
                 <th colspan="2">Numbers</th>
@@ -96,6 +96,11 @@
         <li><a href="http://nodejs.org">http://nodejs.org</a></li>
         <li><a href="http://internal.com/test">http://internal.com/test</a></li>
       </ul>
+      <ol id="elem">
+        <li>Hello</li>
+        <li>World</li>
+    </ol>
+    <button id="btn" onclick="alert(`Hey What's up?`)">Click Me</button>
     <script>
         //Root node
         console.log(document.documentElement);
@@ -130,7 +135,7 @@
         console.log(liTag.nextElementSibling.textContent);
         // Table DOM Manipulation
         const Tabletag=document.body.children[1];
-        console.log(Tabletag.tBodies)
+        console.log(table.tBodies)
         console.log(Tabletag.tBodies[1].rows)
         console.log(Tabletag.tBodies[1].rows[0].cells)
         console.log(Tabletag.tBodies[1].rows[0].cells[1].textContent)
@@ -190,6 +195,30 @@
         //body.after(newDiv)
        // First.replaceWith(newDiv);
        //First.remove();
+       elem.remove();
+       let ol=document.createElement("ol");
+       while(true){
+        let data=prompt("Enter the data of list:");
+        if(!data)
+         break;
+        let li=document.createElement("li");
+        li.textContent=data;
+        ol.appendChild(li);
+       }
+       body.append(ol);
+       function callMe(event){
+        console.log(event.type);
+        console.log(event.currentTarget);
+        console.log(event.clientX);
+        console.log(event.clientY);
+        alert("Good Morning!");
+       }
+       btn.onclick=callMe; //passing the method
+       btn.addEventListener('click',callMe);
+       btn.addEventListener('click',function(){
+        alert("Say Hello!")
+       });
+      // btn.removeEventListener('click',callMe);
     </script>
 </body>
 </html>
