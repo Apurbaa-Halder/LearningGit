@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Bulb</title>
+    <style>
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #bulb{
+            animation: glow 3s ease-in-out infinite;
+        }
+        @keyframes glow {
+            from {
+      opacity: 1;
+    }
+    20% {
+      opacity: 0.75;
+    }
+    40% {
+      opacity: 0.65;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    60% {
+      opacity: 0.65;
+    }
+    80% {
+      opacity: 0.75;
+    to {
+      opacity: 1;
+    }
+        }
+    }
+        #button{
+            padding: 15px 30px;
+            margin-top: 10px;
+            border-radius: 10px;
+            font-size: larger;
+            font-weight: bold;
+            background-color: yellow;
+            color: blue;
+            border: none;
+        }
+        #button:hover{
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <img id="bulb" class="center" src="https://images.freeimages.com/images/previews/70a/light-bulb-1-1427502.jpg" alt="bulb off">
+    <button class="center" id="button">Turn On</button>
+    <script>
+        button.addEventListener('click',bulb_change);
+        function bulb_change(){
+            if(button.textContent==="Turn On"){
+                button.textContent="Turn Off";
+                bulb.src="https://images.freeimages.com/images/previews/07c/light-bulb-2-1427493.jpg";
+            }
+            else{
+                button.textContent="Turn On";
+                bulb.src="https://images.freeimages.com/images/previews/70a/light-bulb-1-1427502.jpg"
+            }
+        }
+        
+    </script>
+</body>
+</html>

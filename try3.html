@@ -204,21 +204,19 @@
         }
         .toggle-label::before{
             content: attr(data-off);
-            right: 12px;
-            color: #fff;
-            text-shadow: 2px 0px 2px aliceblue;
+            right: 12px; 
         }
         .toggle-label::after,.toggle-label::before{
             position: absolute;
             top: 50%;
             margin: -0.5em;
             line-height: 1;
+            color: #fff;
+            text-shadow: 2px 0px 2px aliceblue;
         }
         .toggle-label::after{
             content: attr(data-on);
             left: 12px;
-            color: #fff;
-            text-shadow: 2px 0px 2px aliceblue;
             opacity: 0;
         }
         #switch:checked~.toggle-label{
