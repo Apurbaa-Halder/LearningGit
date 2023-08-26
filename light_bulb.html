@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch Bulb</title>
     <style>
+        body{
+            background-color:black;
+        }
         .center{
             display: block;
             margin-left: auto;
@@ -12,30 +15,31 @@
         }
         #bulb{
             animation: glow 3s ease-in-out infinite;
+            height: 600px;
         }
         @keyframes glow {
-            from {
-      opacity: 1;
-    }
-    20% {
-      opacity: 0.75;
-    }
-    40% {
-      opacity: 0.65;
-    }
-    50% {
-      opacity: 0.5;
-    }
-    60% {
-      opacity: 0.65;
-    }
-    80% {
-      opacity: 0.75;
-    to {
-      opacity: 1;
-    }
+            0% {
+                opacity: 1;
+            }
+            45% {
+                opacity: 0.8;
+            }
+            55% {
+                opacity: 0.7;
+            }
+            65% {
+                opacity: 0.65;
+            }
+            70% {
+                opacity: 0.7;
+            }   
+            80% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
         }
-    }
         #button{
             padding: 15px 30px;
             margin-top: 10px;
@@ -53,18 +57,18 @@
     </style>
 </head>
 <body>
-    <img id="bulb" class="center" src="https://images.freeimages.com/images/previews/70a/light-bulb-1-1427502.jpg" alt="bulb off">
+    <img id="bulb" class="center" src="https://i.pinimg.com/originals/b2/2f/f3/b22ff38174a1a265e9e6bb28e4a0935c.png" alt="bulb off">
     <button class="center" id="button">Turn On</button>
     <script>
         button.addEventListener('click',bulb_change);
         function bulb_change(){
             if(button.textContent==="Turn On"){
                 button.textContent="Turn Off";
-                bulb.src="https://images.freeimages.com/images/previews/07c/light-bulb-2-1427493.jpg";
+                bulb.src="tom/35351-5-glowing-bulb-transparent.png";
             }
             else{
                 button.textContent="Turn On";
-                bulb.src="https://images.freeimages.com/images/previews/70a/light-bulb-1-1427502.jpg"
+                bulb.src="https://i.pinimg.com/originals/b2/2f/f3/b22ff38174a1a265e9e6bb28e4a0935c.png"
             }
         }
         

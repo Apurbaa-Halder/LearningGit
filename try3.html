@@ -244,6 +244,24 @@
         .toggle-label,.toggle-handle{
             transition: all 0.3s ease;
         }
+        .glowing-circle {
+            position: relative;
+            left: 1000px;
+            top: 40px;
+            width: 100px;
+            height: 100px;
+            border-radius:50%;
+            background-color: #fff;
+            animation: glowing 1s ease-in-out infinite alternate;
+        }
+@keyframes glowing {
+  from {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f0f, 0 0 40px #0ff, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
     </style>
 </head>
 <body>
@@ -273,6 +291,7 @@
         <img src="https://thumbs.dreamstime.com/b/footbridge-sea-beach-meditation-journey-calm-hormone-sunset-sea-yoga-footbridge-sea-beach-meditation-journey-calm-hormone-128381503.jpg" alt="Image2" width="250px" height="160px">
         <p>Maldives are one of the world's most popular place to enjoy sea.</p>
     </div> <br>
+    <div class="glowing-circle"></div>
     <label class="switch">
         <input type="checkbox" name="switch" id="switch">
         <span class="toggle-label" data-off="OFF" data-on="ON"></span>
