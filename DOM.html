@@ -26,11 +26,11 @@
         <li class="list-item">Second element</li>
         <li class="list-item">Third element</li>
     </ul>
-    <div class="alldivs">First div</div>
+    <!--<div class="alldivs">First div</div>
     <script>
         console.log(document.querySelector(".alldivs"));
     </script>
-    <div class="alldivs">Second div</div>
+    <div class="alldivs">Second div</div>-->
     <table id="table" name="table">
         <thead class="heading">
             <tr>
@@ -101,6 +101,11 @@
         <li>World</li>
     </ol>
     <button id="btn" onclick="alert(`Hey What's up?`)">Click Me</button>
+    <p>Wait for 5 seconds for the greeting.</p>
+    <p>Click the <b>"Stop"</b> button to stop greeting <b style="color: blue;">(You have 5 seconds!)</b></p>
+    <h2 id="demo"></h2>
+    <button id="stopButton" onclick="stop()">Stop!</button>
+    <p id="Intervaldemo"></p>
     <script>
         //Root node
         console.log(document.documentElement);
@@ -219,6 +224,18 @@
         alert("Say Hello!")
        });
       // btn.removeEventListener('click',callMe);
+      const myTimeout=setTimeout(myGreeting,5000);
+      function myGreeting(){
+        demo.textContent="Happy Birthday!";
+      }
+      const myInterval=setInterval(demoInterval,1000);
+      function demoInterval(){
+        Intervaldemo.textContent+="Hello ";
+      }
+      function stop(){
+        clearTimeout(myTimeout);
+        clearTimeout(myInterval);
+      }
     </script>
 </body>
 </html>

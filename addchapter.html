@@ -27,13 +27,13 @@
         <main>
           <div class="container mt-5 col-6">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Chapter Number or Chapter Name" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button id="button" class="btn btn-outline-dark bg-success" type="button" id="button-addon2">Add</button>
+            <input type="text" class="form-control" placeholder="Chapter Number or Chapter Name" aria-describedby="button-addon2">
+            <button id="button" class="btn btn-outline-light bg-info" type="button" id="button-addon2">Add</button>
           </div>
             <ul id="list" class="list-group">
                 <li id="list-item" class="list-group-item d-flex justify-content-between">
                     <h4 class="flex-grow-1">Chapter 1</h4> 
-                    <button type="button" class="btn btn-warning me-3">Edit</button>
+                    <button type="button" class="btn btn-warning me-3" onclick="editchapter(this)">Edit</button>
                     <button type="button" class="btn btn-danger" onclick="removechapter(this)">Remove</button>
                 </li>
             </ul>
@@ -42,10 +42,13 @@
     <script>
         button.addEventListener('click',addchapter);
         function addchapter(){
+            if(list.children[0].textContent=="All chapters are removed. Please add a chapter."){
+                list.children[0].remove();
+            }
             let currentbtn=button.previousElementSibling;
             let newLi=document.createElement('li');
             newLi.innerHTML=`<h4 class="flex-grow-1">${currentbtn.value}</h4>
-            <button type="button" class="btn btn-warning me-3">Edit</button>
+            <button type="button" class="btn btn-warning me-3" onclick="editchapter(this)">Edit</button>
                     <button type="button" class="btn btn-danger" onclick="removechapter(this)">Remove</button>`
             newLi.className="list-group-item d-flex justify-content-between";
             list.appendChild(newLi);
@@ -57,6 +60,18 @@
                 newEmptyMsg.textContent="All chapters are removed. Please add a chapter.";
                 newEmptyMsg.classList.add("list-group-item");
                 list.appendChild(newEmptyMsg);
+            }
+        }
+        function editchapter(element){
+            if(element.textContent=="Done"){
+                element.parentNode.innerHTML=`<h4 class="flex-grow-1">${element.previousElementSibling.value}</h4>
+            <button type="button" class="btn btn-warning me-3" onclick="editchapter(this)">Edit</button>
+                    <button type="button" class="btn btn-danger" onclick="removechapter(this)">Remove</button>`
+            }
+            else{
+                element.parentNode.innerHTML=`<input type="text" class="form-control" aria-describedby="button-addon2">
+            <button type="button" class="btn btn-success me-3 ms-3" onclick="editchapter(this)">Done</button>
+                    <button type="button" class="btn btn-danger" onclick="removechapter(this)">Remove</button>`;
             }
         }
     </script>
