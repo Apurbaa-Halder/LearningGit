@@ -20,7 +20,7 @@
         }
     </style>
 </head>
-<body id="body">
+<body id="body" onload="startTime()">
     <ul id="element" data="valid">
         <li id="First" class="list-item">First element</li>
         <li class="list-item">Second element</li>
@@ -106,6 +106,13 @@
     <h2 id="demo"></h2>
     <button id="stopButton" onclick="stop()">Stop!</button>
     <p id="Intervaldemo"></p>
+    <p>Click the <b>Try it</b> button. Wait 3 seconds for alert "Hello".</p>
+    <button onclick="myTime()">Try it</button>&emsp;
+    <input type="text" id="txt">&emsp;
+    <button onclick="timedCount()">Start count!</button>
+    <input type="text" id="count">
+    <button onclick="stopCount()">Stop count!</button>
+    <p id="clock"></p>
     <script>
         //Root node
         console.log(document.documentElement);
@@ -224,6 +231,7 @@
         alert("Say Hello!")
        });
       // btn.removeEventListener('click',callMe);
+      //setting the time in methods
       const myTimeout=setTimeout(myGreeting,5000);
       function myGreeting(){
         demo.textContent="Happy Birthday!";
@@ -235,6 +243,30 @@
       function stop(){
         clearTimeout(myTimeout);
         clearTimeout(myInterval);
+      }
+      function myTime(){
+        let timeout=setTimeout(alertFunction,3000);
+      }
+      function alertFunction(){
+        alert("Hello!");
+      }
+      setTimeout(function(){txt.value="2 seconds"},2000);
+      setTimeout(function(){txt.value="4 seconds"},4000);
+      setTimeout(function(){txt.value="6 seconds"},6000);
+      let timing,c=0;
+      function timedCount(){
+        count.value=c;
+        c++;
+        timing=setTimeout(timedCount,1000);
+      }
+      function stopCount(){
+        clearTimeout(timing);
+        c=0;
+      }
+      setInterval(startTime,1000);
+      function startTime(){
+        const date=new Date(); //Date() is an object
+        clock.innerHTML=`<b>Displays local time:${date.toLocaleTimeString()}</b>`;
       }
     </script>
 </body>

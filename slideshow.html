@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshows</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .mySlides {
+            width: 500px;
+            height: 100%;
+            visibility: hidden; 
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            top: 60px;
+            animation: 8s autoplay1 infinite;
+        }
+        @keyframes autoplay1 {
+            0% {
+                visibility: visible;
+            }
+            25% {
+                visibility: hidden;
+            }
+        }
+        #AV1 {
+            animation-delay: 0s;
+        }
+        #AV2 {
+            animation-delay: 2s;
+        }
+        #AV3 {
+            animation-delay: 4s;
+        }
+        #AV4 {
+            animation-delay: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Automatic Slideshow using Animation</h2>
+    <img id="AV1" class="mySlides" src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="The Avengers">
+    <img id="AV2" class="mySlides" src="https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg" alt="Age of Ultron">
+    <img id="AV3" class="mySlides" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg" alt="Infinity war">
+    <img id="AV4" class="mySlides" src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" alt="Endgame">
+    <h2>Manual Slideshow using JS</h2>
+</div>
+    <img src="https://www.nawpic.com/media/2020/iron-man-nawpic-3-e1631127065197.jpg" alt="Iron Man">
+    <img src="https://www.nawpic.com/media/2020/captain-america-nawpic-16.jpg" alt="captain-america">
+    <img src="https://4kwallpapers.com/images/wallpapers/spider-man-no-way-home-2021-movies-marvel-comics-2048x1536-6992.jpg" alt="spiderman">
+    <img src="https://w0.peakpx.com/wallpaper/201/465/HD-wallpaper-avengers-endgame-thor-poster-artwork.jpg" alt="Thor">
+
+</body>
+</html>
