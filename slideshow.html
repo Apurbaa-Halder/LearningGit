@@ -39,6 +39,16 @@
         #AV4 {
             animation-delay: 6s;
         }
+        .manSlides{
+            width: 400px;
+        }
+        #previousSlide,#nextSlide{
+            position: absolute;
+            bottom:60%;
+        }
+        #nextSlide{
+            left: 25.4%;
+        }
     </style>
 </head>
 <body>
@@ -48,12 +58,33 @@
     <img id="AV2" class="mySlides" src="https://m.media-amazon.com/images/M/MV5BMTM4OGJmNWMtOTM4Ni00NTE3LTg3MDItZmQxYjc4N2JhNmUxXkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg" alt="Age of Ultron">
     <img id="AV3" class="mySlides" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg" alt="Infinity war">
     <img id="AV4" class="mySlides" src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810" alt="Endgame">
-    <h2>Manual Slideshow using JS</h2>
 </div>
-    <img src="https://www.nawpic.com/media/2020/iron-man-nawpic-3-e1631127065197.jpg" alt="Iron Man">
-    <img src="https://www.nawpic.com/media/2020/captain-america-nawpic-16.jpg" alt="captain-america">
-    <img src="https://4kwallpapers.com/images/wallpapers/spider-man-no-way-home-2021-movies-marvel-comics-2048x1536-6992.jpg" alt="spiderman">
-    <img src="https://w0.peakpx.com/wallpaper/201/465/HD-wallpaper-avengers-endgame-thor-poster-artwork.jpg" alt="Thor">
-
+    <h2>Manual Slideshow using JS</h2>
+    <div class="Slideshow">
+    <img class="manSlides" src="https://www.nawpic.com/media/2020/iron-man-nawpic-3-e1631127065197.jpg" alt="Iron Man">
+    <img class="manSlides" src="https://www.nawpic.com/media/2020/captain-america-nawpic-16.jpg" alt="captain-america">
+    <img class="manSlides" src="https://4kwallpapers.com/images/wallpapers/spider-man-no-way-home-2021-movies-marvel-comics-2048x1536-6992.jpg" alt="spiderman">
+    <img class="manSlides" src="https://w0.peakpx.com/wallpaper/201/465/HD-wallpaper-avengers-endgame-thor-poster-artwork.jpg" alt="Thor">
+    <button id="previousSlide" onclick="changeSlide(-1)">&#10094;</button>
+    <button id="nextSlide" onclick="changeSlide(+1)">&#10095;</button>
+</div>
+<script>
+    let slideIndex=1;
+    showSlides(slideIndex);
+    function changeSlide(n){
+      showSlides(slideIndex+=n);  
+    }
+    function showSlides(n){
+        let i;
+        let x=document.getElementsByClassName("manSlides");
+        if(n>x.length)
+            slideIndex=1;
+        if(n<1)
+            slideIndex=x.length;
+        for(i=0;i<x.length;i++)
+            x[i].style.display="none";
+        x[slideIndex-1].style.display="block";
+    }
+</script>
 </body>
 </html>
