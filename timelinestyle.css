@@ -1,0 +1,508 @@
+body{
+    background: rgb(253,29,29);
+    background: linear-gradient(90deg, rgba(253,29,29,1) 10%, rgba(0,0,0,0.8) 50%, rgba(248,20,43,1) 90%);
+}
+h1{
+    text-align: center;
+    font-size: 250%;
+    font-family:'Algerian', Geneva, Tahoma, sans-serif;
+    color: blue;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 2px auto -20px auto;
+}
+.container{
+    position: relative;
+    width: 50%;
+    animation: movedown 2s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container:nth-child(1){
+    animation-delay: 0.75s;
+}
+.container:nth-child(2){
+    animation-delay: 3.5s;
+}
+.container:nth-child(3){
+    animation-delay: 5.8s;
+}
+.container:nth-child(4){
+    animation-delay: 8.4s;
+}
+.container:nth-child(5){
+    animation-delay: 10.8s;
+}
+.container:nth-child(6){
+    animation-delay: 13.4s;
+}
+.container:nth-child(7){
+    animation-delay: 15.9s;
+}
+.container:nth-child(8){
+    animation-delay: 18.5s;
+}
+.container:nth-child(9){
+    animation-delay: 20.8s;
+}
+.container:nth-child(10){
+    animation-delay: 23.3s;
+}
+.container:nth-child(11){
+    animation-delay: 25.7s;
+}
+.container:nth-child(12){
+    animation-delay: 28s;
+}
+.container:nth-child(13){
+    animation-delay: 31s;
+}
+.container:nth-child(14){
+    animation-delay: 33.25s;
+}
+.container:nth-child(15){
+    animation-delay: 35.85s;
+}
+.container:nth-child(16){
+    animation-delay: 38.5s;
+}
+.container:nth-child(17){
+    animation-delay: 40.9s;
+}
+.container:nth-child(18){
+    animation-delay: 43.29s;
+}
+.container:nth-child(19){
+    animation-delay: 45.87s;
+}
+.container:nth-child(20){
+    animation-delay: 48.57s;
+}
+.container:nth-child(21){
+    animation-delay: 51s;
+}
+.container:nth-child(22){
+    animation-delay: 53.63s;
+}
+.content{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/947/702/550/daredevil-marvel-comics-wallpaper-preview.jpg");
+    background-size: contain;
+    text-align: center;
+    color: yellow;
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Playfair Display', Geneva, Tahoma, sans-serif;
+    font-size: small;
+}
+#logo,#logo-iron-man,#logo-hulk,#logo-thor,#logo-avenger,#logo-guardian,#logo-panther{
+    z-index: 10;
+    width: 40px;
+    position: absolute;
+    top: 120px;
+    left: 102.5%;
+}
+.right-container #logo{
+    left: -10.5%;
+    top: 126px;
+}
+#logo-panther{
+    width: 65px; 
+    left: -12%;
+}
+#logo-hulk{
+    left: -9.5%;
+}
+#logo-thor{
+    width: 80px; 
+    left: 99%;
+}
+.right-container #logo-thor{
+    width: 80px; 
+    left: -14%;
+}
+#logo-avenger{
+    width: 70px; 
+    left: 100%;
+}
+.right-container #logo-avenger{
+    width: 70px;
+    left: -12%;
+}
+#logo-iron-man{
+    width: 30px;
+    left: 103%;
+}
+.right-container img#logo-iron-man{
+    left: -9%;
+}
+.right-container #logo-guardian{
+    left: -9.5%;
+}
+.left-container{
+    left: 0px;
+}
+.right-container{
+    left:50%;
+}
+p{
+    font-size: large;
+}
+.content>img{
+    width: 120px;
+}
+.timeline::after{
+    content: '';
+    background-color: #ffff;
+    margin-left: -6px;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0px;
+    left: 50%;
+    z-index: -1;
+    animation: moveline 55s linear forwards;
+}
+@keyframes moveline {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid black;
+    position: absolute;
+    top: 130px;
+    right: -14.5px;
+    z-index: 1;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid black;
+    position: absolute;
+    top: 140px;
+    left: -15px;
+    z-index: 1;
+}
+@media screen and (max-width:346px),screen and (max-width:400px) and (min-width:346px){
+    h1{
+        font-size: 180%;
+    }
+    .content{
+        margin-left: 35px;
+    }
+    .timeline::after{
+        left: 15px;
+    }
+    p{
+        font-size: x-large;
+    }
+    .right-container{
+        left:0;
+    } 
+    .container{
+        width: 100%;
+    }
+    .left-container-arrow{
+        left: -14px;
+        border-right: 15px solid black;
+        border-left: 0;
+    }
+    .right-container #logo-guardian{
+        left: -17%;
+        width: 30px;
+        top: 132px;
+    }
+    #logo-avenger,.right-container #logo-avenger {
+        left: -20%;
+        width: 57px;
+        top: 123px;
+    }
+    #logo{
+        width: 28px;
+        top: 125px;
+        left: -40px;
+    }
+    .right-container #logo-thor{
+        width: 58px; 
+        left: -22%;
+        top: 133px;
+    }
+    #logo-thor{
+        width: 58px; 
+        left: -53px;
+        top: 125px;
+    }
+    #logo-panther {
+        width: 55px;
+        left: -22%;
+        top: 133px;
+    }
+    .right-container img#logo-iron-man{
+        top: 130px;
+    }
+    .right-container #logo-avenger{
+        top: 132px;
+    }
+    #logo-iron-man,.right-container img#logo-iron-man{
+        width: 25px;
+        left: -35px;
+    }
+    #logo-hulk{
+        left: -39px;
+        top:134px;
+        width: 30px;
+    }
+    .right-container #logo {
+        left: -17%;
+        top: 136px;
+    }
+    #logo-guardian{
+        width:32px;
+    }
+}
+@media screen and (max-width:400px) and (min-width:346px){
+    .right-container #logo-guardian{
+        left: -13%;
+    }
+    #logo-avenger,.right-container #logo-avenger {
+        left: -16%;
+    }
+    .right-container #logo-thor{
+        left: -18%;
+    }
+    #logo-thor{
+        left: -53px;
+    }
+    #logo-panther {
+        left: -16%;
+    }
+    #logo-iron-man,.right-container img#logo-iron-man{
+        left: -35px;
+    }
+    #logo-hulk{
+        left: -39px;
+    }
+    .right-container #logo {
+        left: -13%;
+    }
+}
+@media screen and (max-width:1000px) and (min-width:901px){
+    #logo-iron-man {
+        left: 104%;
+    }
+    #logo-hulk {
+        left: -12%;
+    }
+    .right-container #logo-thor {
+        left: -17%;
+    }
+    .right-container #logo-avenger {
+        left: -15%;
+    }
+    .right-container img#logo-iron-man{
+        left: -11%;
+    }
+    .right-container #logo-guardian {
+        left: -12%;
+    }
+    .right-container #logo {
+        left: -12.5%;
+    }
+    #logo-panther {
+        width: 70px;
+        left: -15.5%;
+    }
+}
+@media screen and (max-width:900px) and (min-width:801px){
+    #logo-iron-man {
+        left: 105%;
+    }
+    #logo-hulk {
+        left: -15%;
+    }
+    .right-container #logo-thor {
+        left: -22%;
+    }
+    #logo{
+        left: 104.5%;
+    }
+    .right-container #logo-avenger {
+        left: -18%;
+    }
+    .right-container img#logo-iron-man{
+        left: -13.5%;
+    }
+    .right-container #logo-guardian {
+        left: -16%;
+    }
+    .right-container #logo {
+        left: -16%;
+    }
+    #logo-panther {
+        width: 65px;
+        left: -18.5%;
+        top: 130px;
+    }
+    p,h2{
+        font-size: x-large;
+    }
+}
+@media screen and (max-width:800px) and (min-width:701px){
+    #logo-iron-man {
+        left: 105%;
+    }
+    #logo-hulk {
+        left: -17%;
+    }
+    .right-container #logo-thor {
+        left: -24%;
+    }
+    #logo{
+        left: 104.5%;
+    }
+    .right-container #logo-avenger {
+        left: -20%;
+    }
+    .right-container img#logo-iron-man{
+        left: -16%;
+    }
+    .right-container #logo-guardian {
+        left: -18%;
+    }
+    .right-container #logo {
+        left: -18.5%;
+    }
+    #logo-panther {
+        width: 65px;
+        left: -21%;
+        top: 130px;
+    }
+    p{
+        font-size: larger;
+    }
+}
+@media screen and (max-width:700px) and (min-width:601px){
+    #logo-iron-man {
+        left: 106%;
+    }
+    #logo-hulk {
+        left: -20%;
+    }
+    .right-container #logo-thor {
+        left: -30%;
+    }
+    #logo{
+        left: 105.5%;
+    }
+    .right-container #logo-avenger {
+        left: -25%;
+    }
+    .right-container img#logo-iron-man{
+        left: -18%;
+    }
+    .right-container #logo-guardian,.right-container #logo {
+        left: -21%;
+    }
+    #logo-panther {
+        width: 70px;
+        left: -26%;
+        top: 130px;
+    }
+    p{
+        font-size: x-large;
+    }
+}
+@media screen and (max-width:600px) and (min-width:501px){
+    h1{
+        font-size: 210%;
+    }
+    h2{
+        font-size: x-large;
+    }
+    #logo-iron-man {
+        left: 108%;
+    }
+    #logo-hulk {
+        left: -25%;
+    }
+    .right-container #logo-thor {
+        left: -37%;
+    }
+    #logo{
+        left: 107.5%;
+    }
+    .right-container #logo-avenger {
+        left: -30%;
+    }
+    .right-container img#logo-iron-man{
+        left: -23%;
+    }
+    .right-container #logo-guardian,.right-container #logo {
+        left: -27%;
+    }
+    #logo-panther {
+        width: 70px;
+        left: -33%;
+        top: 130px;
+    }
+    p{
+        font-size: x-large;
+    }
+}
+@media screen and (max-width:500px) and (min-width:401px){
+    h1{
+        font-size: 200%;
+    }
+    #logo-iron-man {
+        left: 110%;
+    }
+    #logo-hulk {
+        left: -35%;
+    }
+    .right-container #logo-thor {
+        left: -48%;
+    }
+    #logo{
+        left: 109.5%;
+    }
+    .right-container #logo-avenger {
+        left: -40%;
+    }
+    .right-container img#logo-iron-man{
+        left: -33%;
+    }
+    .right-container #logo-guardian,.right-container #logo {
+        left: -37%;
+    }
+    #logo-panther {
+        width: 70px;
+        left: -43%;
+        top: 130px;
+    }
+    p{
+        font-size: x-large;
+    }
+}
